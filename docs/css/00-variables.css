@@ -1,6 +1,3 @@
-@import "../nord/nord.css";
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
-
 :root {
     --global-font-family: 'Fira Code', monospace;
     --global-font-size: 1.3em;
