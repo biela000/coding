@@ -1,0 +1,37 @@
+main {
+    width: 100%;
+    height: 100%;
+}
+
+menu.lessons-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    align-content: center;
+}
+
+menu.lessons-menu > li {
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+}
+
+a.lessons-link {
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    background: white;
+    position: relative;
+}
+
+a.lessons-link::after {
+    content: 'Lekcja';
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
