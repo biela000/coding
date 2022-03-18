@@ -9,8 +9,9 @@ menu.lessons-menu {
     grid-template-columns: 1fr 1fr;
     width: 80%;
     height: 100%;
-    margin: 0 auto;
+    margin: 5px auto;
     place-items: center;
+    grid-row-gap: 12px;
 }
 
 menu.lessons-menu > li {
@@ -25,10 +26,11 @@ a.lessons-link {
     height: 250px;
     background: white;
     position: relative;
-    transition: all 1.5s;
+    transition: all 0.5s;
     -webkit-box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
     -moz-box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
     box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
+    border: 2px solid var(--global-link-hover-color);
 }
 
 a.lessons-link::after {
@@ -47,7 +49,7 @@ a.lessons-link.lessons-link2::after {
 
 a.lessons-link:hover {
     transform: scale(1.1);
-    color: var(--global-border-color);
+    color: var(--global-link-hover-color);
 }
 
 /* Responsive main container */
