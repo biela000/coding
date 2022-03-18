@@ -3,14 +3,14 @@ main {
     height: 100%;
 }
 
+/* Menu */
 menu.lessons-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    align-content: center;
+    place-items: center;
 }
 
 menu.lessons-menu > li {
@@ -25,13 +25,35 @@ a.lessons-link {
     height: 250px;
     background: white;
     position: relative;
+    transition: all 1.5s;
+    -webkit-box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
+    -moz-box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
+    box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
 }
 
 a.lessons-link::after {
-    content: 'Lekcja';
+    content: "Lekcja 1.";
     position: absolute;
     bottom: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
     width: 100%;
     height: auto;
+}
+
+a.lessons-link.lessons-link2::after {
+    content: "Lekcja 2.";
+}
+
+a.lessons-link:hover {
+    transform: scale(1.1);
+    color: var(--global-border-color);
+}
+
+/* Responsive main container */
+@media (max-width: 950px) {
+    menu.lessons-menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
