@@ -1,4 +1,5 @@
 main {
+    margin: 10px 0;
     width: 100%;
     height: 100%;
 }
@@ -7,18 +8,17 @@ main {
 menu.lessons-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     width: 80%;
     height: 100%;
-    margin: 5px auto;
-    place-items: center;
+    margin: 0 auto;
+    place-content: center;
     grid-row-gap: 12px;
 }
 
 menu.lessons-menu > li {
     display: inline-block;
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
 }
 
 menu.lessons-menu > li:first-of-type {
@@ -30,42 +30,87 @@ a.lessons-link {
     display: inline-block;
     width: 100%;
     height: 250px;
-    background: white;
+    background: var(--bg-color-dark);
     position: relative;
-    transition: all 0.5s;
+    transition: all 0.3s;
     -webkit-box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
     -moz-box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
     box-shadow: 9px 9px 20px 0px var(--bg-color-dark);
-    border: 2px solid var(--global-link-hover-color);
+    border: 2px solid var(--global-border-color);
 }
 
 a.lessons-link::after {
-    content: "Lekcja 1.";
+    content: "Lekcja 1";
     position: absolute;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(180, 142, 173, 0.4);
     text-align: center;
     width: 100%;
     height: auto;
 }
 
 a.lessons-link.lessons-link2::after {
-    content: "Lekcja 2.";
+    content: "Lekcja 2";
 }
 
 a.lessons-link.presentation-link::after {
     content: "Prezentacja";
 }
 
+a.lessons-link::before {
+    content: "[LEKCJA 1]";
+    letter-spacing: 3px;
+    color: var(--global-border-color);
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+    font-size: 2em;
+    transition: all 0.5s;
+}
+
+a.lessons-link.lessons-link2::before {
+    content: "[LEKCJA 2]";
+}
+
+a.lessons-link.presentation-link::before {
+    content: "[PREZENTACJA]";
+}
+
+a.lessons-link:not(.presentation-link):hover::before {
+    letter-spacing: 0.5vw;
+}
+
+a.lessons-link:hover::before {
+    letter-spacing: 1vw;
+}
+
 a.lessons-link:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     color: var(--global-link-hover-color);
 }
 
 /* Responsive main container */
+@media (max-width: 1150px) {
+    menu.lessons-menu > li:not(:first-of-type) {
+        max-width: 350px;
+    }
+}
+
 @media (max-width: 950px) {
     menu.lessons-menu {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    menu.lessons-menu > li:nth-child(2) {
+        max-width: 400px;
+    }
+
+    menu.lessons-menu > li:last-of-type {
+        max-width: 600px;
+        grid-column: 1 / 3;
     }
 }

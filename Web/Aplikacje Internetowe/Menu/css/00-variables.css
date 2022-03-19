@@ -1,7 +1,7 @@
 :root {
     --global-font-family: 'Fira Code', monospace;
     --global-font-size: 1.3em;
-    --global-font-color: var(--nord6);
+    --global-font-color: var(--nord4);
     --global-line-height: 1.6;
     --bg-color-darker: var(--nord0);
     --bg-color-dark: var(--nord1);
@@ -9,6 +9,6 @@
     --global-padding: 0.5em;
     --global-margin: 0.8em;
     --global-border-thickness: 2px;
-    --global-border-color: var(--nord8);
-    --global-link-hover-color: var(--nord13)
+    --global-border-color: var(--nord3);
+    --global-link-hover-color: var(--nord15)
 }
