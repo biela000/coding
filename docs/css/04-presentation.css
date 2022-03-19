@@ -8,13 +8,8 @@ html {
     scroll-padding-top: 130px;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
 body {
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
+    overflow: hidden;
 }
 
 /* Header */
@@ -84,4 +79,17 @@ article.main-slide > div > h2 {
     font-size: 2em;
     font-weight: bold;
     grid-column: 1 / 3;
+}
+
+@media (max-height: 930px) {
+    main > div.main-wrapper {
+        grid-template-rows: repeat(var(--rowcount), 75vh);
+        grid-row-gap: 10vh;
+    }
+    main {
+        margin: 6.5vh 0;
+    }
+    html {
+        scroll-padding-top: calc(130px + 4vh);
+    }
 }
