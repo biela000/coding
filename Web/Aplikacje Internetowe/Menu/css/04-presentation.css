@@ -83,13 +83,13 @@ article.main-slide > div > h2 {
 
 @media (max-height: 930px) {
     main > div.main-wrapper {
-        grid-template-rows: repeat(var(--rowcount), 75vh);
-        grid-row-gap: 10vh;
+        grid-template-rows: repeat(var(--rowcount), calc((100vh - 118px) * 0.85));
+        grid-row-gap: calc((100vh - 118px) * 0.08);
     }
     main {
-        margin: 6.5vh 0;
+        margin: calc((100vh - 118px) * 0.085) 0;
     }
     html {
-        scroll-padding-top: calc(130px + 4vh);
+        scroll-padding-top: calc(130px + (100vh - 118px) * 0.06);
     }
 }
