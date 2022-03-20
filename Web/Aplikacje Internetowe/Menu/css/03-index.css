@@ -179,7 +179,6 @@ menu.example-menu > li > ul > li:hover {
 
     aside.menu-aside {
         top: 285px;
-        border-left: 2px solid var(--global-font-color);
         border-right: 2px solid var(--global-font-color);
     }
 
