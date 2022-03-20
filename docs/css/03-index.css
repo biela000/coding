@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 main {
     margin: 10px 0;
     width: 100%;
@@ -97,31 +101,84 @@ a.lessons-link:hover {
     color: var(--global-link-hover-color);
 }
 
-aside.menu-aside {
+aside {
     position: absolute;
-    right: 140px;
     background-color: rgba(180, 142, 173, 0.7);
     background-image: url('../img/60-lines.png');
     width: auto;
+    cursor: pointer;
+    transition: right 0.5s;
 }
 
-div.menu-aside-wrapper {
-    padding-left: 10px;
+aside.horizontal-menu-aside {
+    right: -723.91px;
+    padding-left: 25px;
 }
 
-menu.example-menu {
+aside.vertical-menu-aside {
+    top: 100px;
+    right: -149.78px;
+}
+
+div.vertical-menu-aside-wrapper {
+    padding-right: 25px;
+}
+
+menu.vertical-example-menu {
+    gap: 10px;
+}
+
+menu.vertical-example-menu > li:first-of-type {
+    padding-top: 10px;
+}
+
+menu.vertical-example-menu > li:last-of-type {
+    padding-bottom: 10px;
+}
+
+aside::before {
+    content: '<';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+aside:hover {
+    right: 0;
+}
+
+aside:hover::before {
+    content: '~';
+}
+
+aside.vertical-menu-aside:hover::before {
+    display: none;
+}
+
+menu.horizontal-example-menu {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
 
 menu.example-menu > li {
     transition: color 0.1s;
-    cursor: pointer;
+}
+
+menu.horizontal-example-menu > li {
+    position: relative;
+}
+
+menu.vertical-example-menu > li {
+    padding-left: 25px;
+}
+
+menu.horizontal-example-menu > li {
     position: relative;
     padding: 10px 0;
 }
 
-menu.example-menu > li:not(:last-of-type) {
+menu.horizontal-example-menu > li:not(:last-of-type) {
     border-right: 2px solid var(--global-font-color);
     padding-right: 10px;
 }
@@ -131,28 +188,49 @@ menu.example-menu > li:hover {
 }
 
 menu.example-menu > li > ul {
-    transform: scaleY(0);
-    transform-origin: top;
     opacity: 0;
     transition: all 0.5s;
     position: absolute;
     background-color: rgba(59, 66, 82, 0.5);
-    width: calc(100% - 10px);
     border: 2px solid var(--global-link-hover-color);
+}
+
+menu.example-menu > li:hover > ul {
+    color: var(--global-font-color);
+}
+
+menu.horizontal-example-menu > li:hover > ul {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+menu.vertical-example-menu > li:hover > ul {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+menu.example-menu > li > ul > li:hover {
+    color: var(--global-link-hover-color);
+}
+
+menu.horizontal-example-menu > li > ul {
+    transform: scaleY(0);
+    transform-origin: top;
+    width: calc(100% - 10px);
     border-top: none;
     top: 100%;
     padding-left: 5px;
 }
 
-menu.example-menu > li:hover > ul {
-    display: block;
-    opacity: 1;
-    transform: scaleY(1);
-    color: var(--global-font-color);
-}
-
-menu.example-menu > li > ul > li:hover {
-    color: var(--global-link-hover-color);
+menu.vertical-example-menu > li > ul {
+    transform: scaleX(0);
+    transform-origin: right;
+    top: 0;
+    width: calc(100% - 10px);
+    border-right: none;
+    left: calc(-100% + 10px);
+    padding-left: 5px;
+    height: 100%;
 }
 
 /* Responsive main container */
@@ -176,40 +254,25 @@ menu.example-menu > li > ul > li:hover {
         max-width: 600px;
         grid-column: 1 / 3;
     }
-
-    aside.menu-aside {
-        top: 285px;
-        border-right: 2px solid var(--global-font-color);
-    }
-
-    menu.example-menu {
-        grid-template-columns: 1fr;
-    }
-
-    menu.example-menu > li {
-        border: none !important;
-    }
-
-    menu.example-menu > li:last-of-type {
-        display: none;
-    }
-
-    menu.example-menu > li > ul {
-        top: 0;
-        left: 100%;
-        transform-origin: left;
-        transform: scaleX(0);
-        border: 2px solid var(--global-link-hover-color);
-        height: calc(100% * 4.5 + 3px);
-    }
-
-    menu.example-menu > li:nth-child(4) > ul {
-        top: -17.5px;
-    }
 }
 
-@media (max-width: 790px) {
-    aside.menu-aside {
+@media (max-width: 775px) {
+    aside.horizontal-menu-aside {
+        right: -430.48px;
+    }
+
+    aside.horizontal-menu-aside:hover {
+        right: 0;
+    }
+    menu.horizontal-example-menu {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: auto;
+    }
+    menu.horizontal-example-menu > li:nth-child(4), menu.horizontal-example-menu > li:last-of-type {
         display: none;
+    }
+
+    menu.horizontal-example-menu > li:nth-child(3) {
+        border-right: none;
     }
 }
