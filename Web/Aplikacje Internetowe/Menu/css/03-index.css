@@ -2,11 +2,16 @@ main {
     margin: 10px 0;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 /* Menu */
-menu.lessons-menu {
+menu {
+    list-style-type: none;
     display: grid;
+}
+
+menu.lessons-menu {
     grid-template-columns: 1fr 1fr;
     width: 80%;
     height: 100%;
@@ -92,6 +97,64 @@ a.lessons-link:hover {
     color: var(--global-link-hover-color);
 }
 
+aside.menu-aside {
+    position: absolute;
+    right: 140px;
+    background-color: rgba(180, 142, 173, 0.7);
+    background-image: url('../img/60-lines.png');
+    width: auto;
+}
+
+div.menu-aside-wrapper {
+    padding-left: 10px;
+}
+
+menu.example-menu {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+menu.example-menu > li {
+    transition: color 0.1s;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0;
+}
+
+menu.example-menu > li:not(:last-of-type) {
+    border-right: 2px solid var(--global-font-color);
+    padding-right: 10px;
+}
+
+menu.example-menu > li:hover {
+    color: var(--global-link-hover-color);
+}
+
+menu.example-menu > li > ul {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    background-color: rgba(59, 66, 82, 0.5);
+    width: calc(100% - 10px);
+    border: 2px solid var(--global-link-hover-color);
+    border-top: none;
+    top: 100%;
+    padding-left: 5px;
+}
+
+menu.example-menu > li:hover > ul {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+    color: var(--global-font-color);
+}
+
+menu.example-menu > li > ul > li:hover {
+    color: var(--global-link-hover-color);
+}
+
 /* Responsive main container */
 @media (max-width: 1150px) {
     menu.lessons-menu > li:not(:first-of-type) {
@@ -112,5 +175,42 @@ a.lessons-link:hover {
     menu.lessons-menu > li:last-of-type {
         max-width: 600px;
         grid-column: 1 / 3;
+    }
+
+    aside.menu-aside {
+        top: 285px;
+        border-left: 2px solid var(--global-font-color);
+        border-right: 2px solid var(--global-font-color);
+    }
+
+    menu.example-menu {
+        grid-template-columns: 1fr;
+    }
+
+    menu.example-menu > li {
+        border: none !important;
+    }
+
+    menu.example-menu > li:last-of-type {
+        display: none;
+    }
+
+    menu.example-menu > li > ul {
+        top: 0;
+        left: 100%;
+        transform-origin: left;
+        transform: scaleX(0);
+        border: 2px solid var(--global-link-hover-color);
+        height: calc(100% * 4.5 + 3px);
+    }
+
+    menu.example-menu > li:nth-child(4) > ul {
+        top: -17.5px;
+    }
+}
+
+@media (max-width: 790px) {
+    aside.menu-aside {
+        display: none;
     }
 }

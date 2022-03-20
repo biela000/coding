@@ -30,6 +30,7 @@ header {
     width: 100%;
     height: 70px;
     background-color: var(--bg-color-dark);
+    background-image: url('../img/asfalt-light.png');
     border-bottom: var(--global-border-thickness) solid var(--global-border-color);
 }
 
@@ -70,6 +71,7 @@ div.header-wrapper > h1:hover {
 /* Footer */
 footer {
     background-color: var(--bg-color-dark);
+    background-image: url('../img/asfalt-light.png');
     height: auto;
     padding: var(--global-padding);
     border-top: var(--global-border-thickness) solid var(--global-border-color);
