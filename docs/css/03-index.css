@@ -124,10 +124,6 @@ div.vertical-menu-aside-wrapper {
     padding-right: 25px;
 }
 
-menu.vertical-example-menu {
-    gap: 10px;
-}
-
 menu.vertical-example-menu > li:first-of-type {
     padding-top: 10px;
 }
@@ -176,6 +172,11 @@ menu.vertical-example-menu > li {
 menu.horizontal-example-menu > li {
     position: relative;
     padding: 10px 0;
+}
+
+menu.vertical-example-menu > li {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 menu.horizontal-example-menu > li:not(:last-of-type) {
