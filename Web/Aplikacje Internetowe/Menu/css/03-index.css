@@ -19,6 +19,10 @@ menu {
     display: grid;
 }
 
+div.main-wrapper {
+    position: relative;
+}
+
 menu.lessons-menu {
     grid-template-columns: 1fr 1fr;
     width: 80%;
@@ -255,6 +259,29 @@ li.selected-lesson {
     display: inline;
 }
 
+menu.lessons-menu > li:not(.selected-lesson) {
+    position: relative;
+}
+
+menu.lessons-menu > li:not(.selected-lesson)::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    border-bottom: 10px solid var(--bg-color-dark);
+    border-right: 10px solid var(--bg-color-dark);
+    transition: border-color 0.5s;
+}
+
+menu.lessons-menu > li:not(.selected-lesson, .presentation)::before {
+    right: -18px;
+}
+
+menu.lessons-menu > li:not(.selected-lesson):hover::before {
+    border-color: var(--global-link-hover-color);
+}
 /* Responsive main container */
 @media (max-width: 1600px) {
     menu.lessons-menu > li.selected-lesson {
