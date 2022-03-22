@@ -1,0 +1,22 @@
+section.exercise {
+    width: 90%;
+    margin: auto;
+    height: 80%;
+}
+
+div.section-wrapper {
+    height: 500px;
+    grid-template-columns: 600px 500px 500px;
+    gap: 20px;
+}
+
+div.user-example, div.finished-example {
+    background-color: var(--bg-color-dark);
+    border: 2px solid var(--bg-color);
+}
+
+textarea.user-code {
+    background-color: var(--bg-color-dark);
+    border: 2px solid var(--bg-color);
+    resize: none;
+}
