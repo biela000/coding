@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CodeMirror stylesheets -->
+    <link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
+    <link rel="stylesheet" href="https://codemirror.net/theme/nord.css">    
     <!-- Color scheme -->
     <link rel="stylesheet" href="../nord/nord.css">
     <!-- Global stylesheets -->
@@ -19,7 +22,16 @@
     <link rel="stylesheet" href="../css/02-global.css">
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="../css/05-f_lesson.css">
-    <!-- Script -->
+    <!-- Scripts -->
+    <script src="../js/codemirror.js"></script>
+    <script src="https://codemirror.net/mode/xml/xml.js" defer></script>
+    <script src="https://codemirror.net/mode/css/css.js" defer></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js" defer></script>
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js" defer></script>
+    <script src="https://codemirror.net/addon/edit/matchbrackets.js"></script>
+    <script src="https://codemirror.net/addon/edit/closebrackets.js"></script>
+    <script src="https://codemirror.net/addon/edit/matchtags.js"></script>
+    <script src="https://codemirror.net/addon/edit/closetag.js"></script>
     <script src="../js/f_lesson.js" defer></script>
 </head>
 <body>
@@ -33,8 +45,23 @@
             <div class="wrapper main-wrapper">
                 <section class="exercise first-exercise">
                     <div class="wrapper section-wrapper">
-                        <textarea name="user-code" class="user-code"></textarea>
-                        <div class="user-example"></div>
+                        <div class="wrapper" id="user-code">
+                        
+                        </div>
+                        <div class="user-example">
+                            <iframe class="user-result">
+                                <html>
+                                    <head>
+                                        <style>
+                                            body {
+                                                overflow: hidden;
+                                            }
+                                        </style>
+                                    </head>
+                                    <body></body>
+                                </html>
+                            </iframe>
+                        </div>
                         <div class="finished-example"></div>
                     </div>
                 </section>
