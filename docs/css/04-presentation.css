@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 /* Header */
@@ -17,6 +17,7 @@ header {
     min-height: 118px;
     border: none;
     position: fixed;
+    z-index: 2;
 }
 
 div.header-wrapper {
@@ -61,12 +62,16 @@ div.nav-wrapper > a:hover {
 main {
     margin: 20px 0;
     padding: 110px 20px 0 20px;
-    z-index: -1;
+    min-width: 760px;
 }
 
 main > div.main-wrapper {
     grid-template-rows: repeat(var(--rowcount), 85vh);
     grid-row-gap: 20px;
+}
+
+article.main-slide {
+    min-height: 750px;
 }
 
 article.main-slide > div.wrapper.article-wrapper {
@@ -96,13 +101,104 @@ div.wrapper.article-wrapper::after {
 
 @media (max-height: 930px) {
     main > div.main-wrapper {
-        grid-template-rows: repeat(var(--rowcount), calc((100vh - 118px) * 0.85));
-        grid-row-gap: calc((100vh - 118px) * 0.08);
+        row-gap: 150px;
     }
-    main {
+    /*main {
         margin: calc((100vh - 118px) * 0.085) 0;
     }
     html {
         scroll-padding-top: calc(130px + (100vh - 118px) * 0.06);
+    } */
+    body {
+        overflow-y: auto;
     }
+}
+/* Kuba */
+article.main-slide h2 {
+    color: var(--global-link-hover-color);
+    text-transform: lowercase;
+}
+
+article#slide1 > div.article-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 10px;
+}
+
+menu.vertical-menu {
+    display: grid;
+    list-style-type: none;
+    background-color: rgba(180, 142, 173, 0.7);
+    justify-self: center;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    padding: 20px;
+}
+
+menu.vertical-menu > li {
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+menu.vertical-menu > li:hover {
+    color: var(--global-link-hover-color);
+}
+/* Kasper */
+
+.what-is-menu-p
+{
+    width: 45%;
+    position: absolute;
+    left: 25px;
+    top: 200px;
+}
+
+.what-is-menu-img
+{
+    width: 400px;
+    position: absolute;
+    right: 10px;
+    top: 20%;
+}
+
+/* Franek */
+.capital {
+    font-weight: bold;
+}
+
+.capital::after {
+    content: ": ";
+}
+
+.capital::first-letter {
+    text-transform: capitalize;
+}
+.list {
+    /*list-style-type: ' > ';*/
+    list-style-image: url('https://cdn.discordapp.com/attachments/954444585763999794/956647305275125800/menu_1.png');
+}
+.list li {
+    margin: 30px;
+}
+menu.horizontal-menu {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(180, 142, 173, 0.7);
+    justify-self: center;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    padding: 20px;
+}
+
+menu.horizontal-menu > li {
+    transition: color 0.5s;
+    cursor: pointer;
+    text-align: center;
+}
+
+menu.horizontal-menu > li:hover {
+    color: var(--global-link-hover-color);
 }
