@@ -2,6 +2,10 @@ body {
     overflow-x: hidden;
 }
 
+div.body-wrapper {
+    grid-template-rows: auto 1fr auto;
+}
+
 main {
     margin: 10px 0 30px 0;
     width: 100%;
