@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CodeMirror stylesheets -->
+    <link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
+    <link rel="stylesheet" href="https://codemirror.net/theme/nord.css"> 
     <!-- Color scheme -->
     <link rel="stylesheet" href="../nord/nord.css">
     <!-- Global stylesheets -->
@@ -20,6 +23,15 @@
     <!-- Local stylesheet -->
     <link rel="stylesheet" href="../css/04-presentation.css">
     <!-- Script -->
+    <script src="../js/codemirror.js"></script>
+    <script src="https://codemirror.net/mode/xml/xml.js" defer></script>
+    <script src="https://codemirror.net/mode/css/css.js" defer></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js" defer></script>
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js" defer></script>
+    <script src="https://codemirror.net/addon/edit/matchbrackets.js"></script>
+    <script src="https://codemirror.net/addon/edit/closebrackets.js"></script>
+    <script src="https://codemirror.net/addon/edit/matchtags.js"></script>
+    <script src="https://codemirror.net/addon/edit/closetag.js"></script>
     <script src="../js/presentation.js" defer></script>
 </head>
 <body>
@@ -307,20 +319,109 @@
                 </article>
                 <article class="main-slide" id="slide6">
                     <div class="wrapper article-wrapper">
-                        <h2>Komu potrzebne w ogóle menu?</h2>
-                        <p>Menu używane jest w bardzo wielu dziedzinach, m.in. w informatyce niesamowite to wszystko jest naprawdę.</p>
+                        <h2>[jak stworzyć menu nawigacyjne]</h2>
+                        <div class="wrapper article-content-wrapper">
+                            <menu>
+                                <li>
+                                    Główna
+                                    <span></span>
+                                </li>
+                                <li>
+                                    Produkty
+                                    <menu>
+                                        <li>
+                                            <h3>Programowanie</h3>
+                                            <menu>
+                                                <li>PC-ty</li>
+                                                <li>Laptopy</li>
+                                                <li>Tablety</li>
+                                                <li>Smartfony</li>
+                                                <li>Klawiatury</li>
+                                            </menu>
+                                        </li>
+                                        <li>
+                                            <h3>TV & Wideo</h3>
+                                            <menu>
+                                                <li>Telewizory LED</li>
+                                                <li>Telewizory plazmowe</li>
+                                                <li>Telewizory 3D</li>
+                                                <li>Odtwarzacze DVD</li>
+                                                <li>Odtwarzacze Blu-Ray</li>
+                                            </menu>
+                                        </li>
+                                        <li>
+                                            <h3>Drukarki</h3>
+                                            <menu>
+                                                <li>Drukarki 3D</li>
+                                                <li>
+                                                    Drukarki 3D
+                                                </li>
+                                                <li>
+                                                    Drukarki 3D
+                                                </li>
+                                                <li>
+                                                    Drukarki 3D
+                                                </li>
+                                                <li>
+                                                    Drukarki 3D
+                                                </li>
+                                            </menu>
+                                        </li>
+                                    </menu>
+                                </li>
+                                <li>O nas</li>
+                                <li>Nowości</li>
+                                <li>Kontakt</li>
+                            </menu>
+                        </div>
                     </div>
                 </article>
-                <article class="main-slide" id="slide7">
+                <article class="main-slide codemirror-slide" id="slide7">
                     <div class="wrapper article-wrapper">
-                        <h2>Komu potrzebne w ogóle menu?</h2>
-                        <p>Menu używane jest w bardzo wielu dziedzinach, m.in. w informatyce niesamowite to wszystko jest naprawdę.</p>
+                        <h2>[krok 1 - html]</h2>
+                        <h3>Zapisujemy początkowy szkielet menu w HTML.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="horizontal-tutorial-code" id="horizontal-tutorial-code1"></div>
+                            <iframe class="horizontal-tutorial-iframe">
+                                <html>
+                                    <head></head>
+                                    <body>
+
+                                    </body>
+                                </html>
+                            </iframe>
+                            <div class="tutorial-code-content" style="display: none;"><menu class="my-horizontal-menu">
+    <li>Główna</li>
+    <li>Produkty</li>
+    <li>O nas</li>
+    <li>Nowości</li>
+    <li>Kontakt</li>
+</menu></div>
+                        </div>
                     </div>
                 </article>
-                <article class="main-slide" id="slide8">
+                <article class="main-slide codemirror-slide" id="slide8">
                     <div class="wrapper article-wrapper">
-                        <h2>Komu potrzebne w ogóle menu?</h2>
-                        <p>Menu używane jest w bardzo wielu dziedzinach, m.in. w informatyce niesamowite to wszystko jest naprawdę.</p>
+                        <h2>[krok 1 - html]</h2>
+                        <h3>Zapisujemy początkowy szkielet menu w HTML.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="horizontal-tutorial-code" id="horizontal-tutorial-code2"></div>
+                            <iframe class="horizontal-tutorial-iframe">
+                                <html>
+                                    <head></head>
+                                    <body>
+
+                                    </body>
+                                </html>
+                            </iframe>
+                            <div class="tutorial-code-content" style="display: none;"><menu class="my-horizontal-menu">
+    <li>Główna</li>
+    <li>Produkty</li>
+    <li>O nas</li>
+    <li>Nowości</li>
+    <li>Kontakt</li>
+</menu></div>
+                        </div>
                     </div>
                 </article>
             </div>
