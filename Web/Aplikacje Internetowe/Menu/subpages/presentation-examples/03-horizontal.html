@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pl">
+    <head></head>
+    <body>
+        <menu class="my-horizontal-menu">
+            <li>
+                Główna
+                <span class="current-pointer"></span>
+            </li>
+            <li class="my-horizontal-menu--drop-down-container">
+                Produkty
+                <menu class="my-horizontal-menu--drop-down">
+                    <li>
+                        <h3>Programowanie</h3>
+                        <menu>
+                            <li>PC-ty</li>
+                            <li>Laptopy</li>
+                            <li>Tablety</li>
+                            <li>Smartfony</li>
+                            <li>Klawiatury</li>
+                        </menu>
+                    </li>
+                    <li>
+                        <h3>TV &amp; Wideo</h3>
+                        <menu>
+                            <li>Telewizory LED</li>
+                            <li>Telewizory plazmowe</li>
+                            <li>Telewizory 3D</li>
+                            <li>Odtwarzacze DVD</li>
+                            <li>Odtwarzacze Blu-Ray</li>
+                        </menu>
+                    </li>
+                    <li>
+                        <h3>Drukarki</h3>
+                        <menu>
+                            <li>Drukarki 3D</li>
+                            <li>Drukarki 3D</li>
+                            <li>Drukarki 3D</li>
+                            <li>Drukarki 3D</li>
+                            <li>Drukarki 3D</li>
+                        </menu>
+                    </li>
+                </menu>
+            </li>
+            <li>O nas</li>
+            <li>Nowości</li>
+            <li>Kontakt</li>
+        </menu>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+        
+            menu.my-horizontal-menu {
+                list-style-type: none;
+                background-color: #3B4252;
+                color: #D8DEE9;
+                width: 100%;
+                min-width: 655px;
+                margin: 20px auto 0 auto;
+                font-size: 0;
+            }
+        
+            menu.my-horizontal-menu > li {
+                display: inline-block;
+                font-size: 24px;
+                width: calc(100% / 5);
+                cursor: pointer;
+                transition: background-color 0.5s;
+                padding-left: 5px;
+                padding-right: 5px;
+                text-align: center;
+            }
+        
+            menu.my-horizontal-menu > li:hover {
+                background-color: #B48EAD;
+            }
+        
+            menu.my-horizontal-menu {
+                position: relative;
+            }
+        
+            span.current-pointer {
+                display: inline-block;
+                position: absolute;
+                width: 20%;
+                height: 3px;
+                background-color: #D8DEE9;
+                left: 0;
+                top: -3px;
+                transition: transform 0.5s;
+            }
+
+            menu.my-horizontal-menu--drop-down {
+                list-style-type: none;
+                position: absolute;
+                width: 100%;
+                background-color: rgba(46, 52, 64, 0.7);
+                left: 0;
+                text-align: left;
+                justify-content: space-around;
+                font-size: 18px;
+                display: none;
+            }
+
+            menu.my-horizontal-menu--drop-down menu {
+                list-style-type: none;
+            }
+
+            menu.my-horizontal-menu--drop-down menu > li {
+                transition: color 0.5s;
+            }
+
+            menu.my-horizontal-menu--drop-down menu > li:hover {
+                color: #B48EAD;
+            }
+
+            li.my-horizontal-menu--drop-down-container:hover > menu.my-horizontal-menu--drop-down {
+                display: flex;
+            }
+        </style>
+        <script>
+            const horizontalMenuElements = document.querySelectorAll('menu.my-horizontal-menu > li');
+            for (let i = 0; i < horizontalMenuElements.length; i++) {
+                const underline = document.querySelector('span.current-pointer');
+                horizontalMenuElements[i].addEventListener('click', () => {
+                    underline.style.transform = 'translateX(calc(' + i + ' * 100%))';
+                });
+            }
+        </script>
+    </body>
+</html>

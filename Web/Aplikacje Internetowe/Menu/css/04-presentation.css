@@ -21,7 +21,7 @@ header {
     min-height: 118px;
     border: none;
     position: fixed;
-    z-index: 2;
+    z-index: 7;
 }
 
 div.header-wrapper {
@@ -479,10 +479,15 @@ iframe.horizontal-tutorial-iframe {
     background-color: var(--bg-color);
 }
 
+div.CodeMirror.cm-s-nord {
+    height: 500px;
+}
+
 article.codemirror-slide div.article-content-wrapper {
     margin-top: 20px;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    height: auto;
 }
 
 /* Kasper */
