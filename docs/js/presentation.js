@@ -3,9 +3,11 @@ const slides = document.querySelectorAll('article.main-slide');
 const nav_wrapper = document.querySelector('div.nav-wrapper');
 const hamburgers = document.querySelectorAll('div.hamburger-example');
 const horizontal_menu_elements = document.querySelectorAll('article#slide6 div.article-content-wrapper > menu > li');
-const horizontal_tutorial_code = document.querySelectorAll('div.horizontal-tutorial-code');
-const horizontal_tutorial_code_iframes = document.querySelectorAll('iframe.horizontal-tutorial-iframe');
-const horizontal_tutorial_code_place = [];
+const tutorial_code = document.querySelectorAll('div.tutorial-code');
+const tutorial_code_iframes = document.querySelectorAll('iframe.tutorial-iframe');
+const tutorial_code_place = [];
+const vertical_menu_elements = document.querySelectorAll('menu.recreated-vertical-menu > li:not(.indicator)');
+const vertical_menu_indicator = document.querySelector('li.indicator');
 const code_fragments = [
     `<menu class="my-horizontal-menu">
     <li>Główna</li>
@@ -246,6 +248,416 @@ const code_fragments = [
             underline.style.transform = 'translateX(calc(' + i + ' * 100%))';
         });
     }
+</script>`,
+    `<menu class="my-vertical-menu">
+    <li>
+        <a href="#">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="compass-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="podium-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="trophy-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="construct-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="diamond-outline"></ion-icon>
+        </a>
+    </li>
+</menu>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>`,
+    `<menu class="my-vertical-menu">
+    <li>
+        <a href="#">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="compass-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="podium-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="trophy-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="construct-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="diamond-outline"></ion-icon>
+        </a>
+    </li>
+</menu>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    menu.my-vertical-menu {
+        list-style-type: none;
+        background-color: #D8DEE9;
+        color: #3B4252;
+        width: fit-content;
+        font-size: 36px; /**/
+        border-radius: 10px;
+        padding: 5px 0; /**/
+    }
+
+    menu.my-vertical-menu > li {
+        padding: 0 5px; /**/
+        cursor: pointer;
+    }
+
+    menu.my-vertical-menu a {
+        color: var(--bg-color-dark);
+        display: flex;
+        align-items: center;
+        height: 65px; /**/
+        width: 65px; /**/
+        justify-content: center;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+</style>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>`,
+    `<menu class="my-vertical-menu">
+    <li class="indicator"></li>
+    <li>
+        <a href="#">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="compass-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="podium-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="trophy-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="construct-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="diamond-outline"></ion-icon>
+        </a>
+    </li>
+</menu>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    menu.my-vertical-menu {
+        list-style-type: none;
+        background-color: #D8DEE9;
+        color: #3B4252;
+        width: fit-content;
+        font-size: 36px; /**/
+        border-radius: 10px;
+        position: relative;
+        padding: 5px 0; /**/
+    }
+
+    menu.my-vertical-menu > li {
+        padding: 0 5px; /**/
+        cursor: pointer;
+    }
+
+    menu.my-vertical-menu a {
+        color: #3B4252;
+        display: flex;
+        align-items: center;
+        height: 65px; /**/
+        width: 65px; /**/
+        justify-content: center;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+
+    menu.my-vertical-menu {
+        position: relative;
+    }
+
+    li.indicator {
+        position: absolute;
+        height: 70px; /**/
+        width: 70px; /**/
+        background-color: #B48EAD;
+        border-radius: 50%;
+        right: -50%;
+        border: 10px solid #3B4252; /**/
+        transition: transform 0.5s;
+    },
+</style>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>`,
+    `<menu class="my-vertical-menu">
+    <li class="indicator"></li>
+    <li class="default">
+        <a href="#">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="compass-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="podium-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="trophy-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="construct-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <ion-icon name="diamond-outline"></ion-icon>
+        </a>
+    </li>
+</menu>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    menu.my-vertical-menu {
+        list-style-type: none;
+        background-color: #D8DEE9;
+        color: #3B4252;
+        width: fit-content;
+        font-size: 36px; /**/
+        border-radius: 10px;
+        position: relative;
+        padding: 5px 0; /**/
+    }
+
+    menu.my-vertical-menu > li {
+        padding: 0 5px; /**/
+        cursor: pointer;
+    }
+
+    menu.my-vertical-menu a {
+        color: #3B4252;
+        display: flex;
+        align-items: center;
+        height: 65px; /**/
+        width: 65px; /**/
+        justify-content: center;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+
+    menu.my-vertical-menu {
+        position: relative;
+    }
+
+    li.indicator {
+        position: absolute;
+        height: 70px; /**/
+        width: 70px; /**/
+        background-color: #B48EAD;
+        border-radius: 50%;
+        right: -50%;
+        border: 10px solid #3B4252; /**/
+        transition: transform 0.5s;
+    }
+</style>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const menuElements = document.querySelectorAll('menu.my-vertical-menu > li:not(.indicator)');
+    const menuElementHyperlinks = document.querySelectorAll('menu.my-vertical-menu a');
+    const indicator = document.querySelector('li.indicator');
+    
+    document.querySelector('li.default > a').style.transform = 'translateX(40px)';
+
+    for (let i = 0; i < menuElements.length; i++) {
+        menuElements[i].addEventListener('click', () => {
+            menuElementHyperlinks.forEach((listelement) => listelement.style.transform = '');
+            menuElementHyperlinks[i].style.transform = 'translateX(40px)'; //
+            indicator.style.transform = 'translateY(calc(' + i + '* 64px))';
+        });
+    }
+</script>`,
+    `<menu class="my-vertical-menu">
+    <li class="indicator"></li>
+    <li class="default">
+        <a href="#">
+            <span class="text">
+                HOME
+            </span>
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="text">
+                NAV
+            </span>
+            <ion-icon name="compass-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="text">
+                STATS
+            </span>
+            <ion-icon name="podium-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="text">
+                WIN
+            </span>
+            <ion-icon name="trophy-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="text">
+                SET
+            </span>
+            <ion-icon name="construct-outline"></ion-icon>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="text">
+                VIP
+            </span>
+            <ion-icon name="diamond-outline"></ion-icon>
+        </a>
+    </li>
+</menu>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    menu.my-vertical-menu {
+        list-style-type: none;
+        background-color: #D8DEE9;
+        color: #3B4252;
+        width: fit-content;
+        font-size: 36px; /**/
+        border-radius: 10px;
+        position: relative;
+        padding: 5px 0; /**/
+    }
+
+    menu.my-vertical-menu > li {
+        padding: 0 5px; /**/
+        cursor: pointer;
+    }
+
+    menu.my-vertical-menu a {
+        color: #3B4252;
+        display: flex;
+        align-items: center;
+        height: 65px; /**/
+        width: 65px; /**/
+        justify-content: center;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+
+    menu.my-vertical-menu {
+        position: relative;
+    }
+
+    li.indicator {
+        position: absolute;
+        height: 70px; /**/
+        width: 70px; /**/
+        background-color: #B48EAD;
+        border-radius: 50%;
+        right: -50%;
+        border: 10px solid #3B4252; /**/
+        transition: transform 0.5s;
+    }
+
+    span.text {
+        width: min-content;
+        word-break: break-all;
+        font-size: 12px; /**/
+        position: absolute;
+        transform: translateX(-55px); /**/
+        text-decoration: none;
+    }
+</style>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const menuElements = document.querySelectorAll('menu.my-vertical-menu > li:not(.indicator)');
+    const menuElementHyperlinks = document.querySelectorAll('menu.my-vertical-menu a');
+    const indicator = document.querySelector('li.indicator');
+    
+    document.querySelector('li.default > a').style.transform = 'translateX(40px)';
+
+    for (let i = 0; i < menuElements.length; i++) {
+        menuElements[i].addEventListener('click', () => {
+            menuElementHyperlinks.forEach((listelement) => listelement.style.transform = '');
+            menuElementHyperlinks[i].style.transform = 'translateX(40px)'; //
+            indicator.style.transform = 'translateY(calc(' + i + '* 64px))';
+        });
+    }
 </script>`
 ];
 // const code_fragments = [ 
@@ -304,8 +716,8 @@ for (let i = 0; i < horizontal_menu_elements.length; i++) {
 }
 
 // Initialize CodeMirror objects
-for (let i = 0; i < horizontal_tutorial_code.length; i++) {
-    horizontal_tutorial_code_place.push(CodeMirror(document.getElementById(`horizontal-tutorial-code${i + 1}`), {
+for (let i = 0; i < tutorial_code.length; i++) {
+    tutorial_code_place.push(CodeMirror(document.getElementById(`tutorial-code${i + 1}`), {
         lineNumbers: true,
         tabSize: 4,
         matchBrackets: true,
@@ -314,15 +726,24 @@ for (let i = 0; i < horizontal_tutorial_code.length; i++) {
         lineWrapping: true,
         readOnly: true
     }));
-    console.log(horizontal_tutorial_code_iframes[i]);
-    horizontal_tutorial_code_iframes[i].contentWindow.document.designMode = 'on';
-    console.log(horizontal_tutorial_code_iframes[i].contentWindow.document.body.innerHTML);
-    // horizontal_tutorial_code_place[i].setValue(horizontal_tutorial_code_iframes[i].contentWindow.document.body.innerHTML);
-    horizontal_tutorial_code_place[i].setValue(code_fragments[i]);
+    console.log(tutorial_code_iframes[i]);
+    tutorial_code_iframes[i].contentWindow.document.designMode = 'on';
+    console.log(tutorial_code_iframes[i].contentWindow.document.body.innerHTML);
+    // tutorial_code_place[i].setValue(tutorial_code_iframes[i].contentWindow.document.body.innerHTML);
+    tutorial_code_place[i].setValue(code_fragments[i]);
     // console.log(code_fragments[i]);
-    // console.log(horizontal_tutorial_code_place[i].getValue());
+    // console.log(tutorial_code_place[i].getValue());
     // setTimeout(() => {
-    //     horizontal_tutorial_code_iframes[i].contentWindow.document.querySelector('body').innerHTML = horizontal_tutorial_code_place[i].getValue();
+    //     tutorial_code_iframes[i].contentWindow.document.querySelector('body').innerHTML = tutorial_code_place[i].getValue();
     // }, 1);
     // console.log(document.querySelectorAll('div.tutorial-code-content'));
+}
+
+// Add onclick events for exemplary vertical menu elements
+for (let i = 0; i < vertical_menu_elements.length; i++) {
+    vertical_menu_elements[i].addEventListener('click', () => {
+        vertical_menu_elements.forEach((item) => item.classList.remove('active'));
+        vertical_menu_elements[i].classList.add('active');
+        vertical_menu_indicator.style.transform = `translateY(calc(${i} * 89px))`;
+    });
 }
