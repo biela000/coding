@@ -1,0 +1,81 @@
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: white;
+  }
+  menu {
+    list-style-type: none;
+  	background: #2E3440;
+    width: 350px;
+    height: 50px;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+  menu > li {
+    width: 25px;
+    height: 25px;
+    background: #B48EAD;
+    border-radius: 50%;
+  	transition: all 0.5s;
+    cursor: pointer;
+  }
+  menu > li:hover {
+    background: #D8DEE9;
+  }
+  menu > li:active {
+    background: #4C566A;
+  }
+  .pointer {
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    top: 60px;
+    pointer-events: none;
+    text-align: center;
+    padding-top: 2px;
+  }
+  .pointer > .triangle {
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 20px solid #B48EAD;
+    top: -20px;
+    left: 25px;
+    transition: all 0.5s;
+  }
+  .text {
+    transition: all 0.5s;
+  }
+</style>
+<div>
+  <menu>
+  	<li data-content="HOME"></li>
+    <li data-content="ABOUT"></li>
+    <li data-content="CONTACT"></li>
+    <li data-content="NEWSLETTER"></li>
+    <li data-content="PROFILE"></li>
+  	<li class="pointer"><span class="text">HOME</span><span class="triangle"></span></li>
+  </menu>
+</div>
+<script>
+	{
+    const menuElements = document.querySelectorAll('menu > li');
+    const menuPointerText = document.querySelector('.pointer > .text');
+    const menuPointerTriangle = document.querySelector('.pointer > .triangle');
+    for (let i = 0; i < menuElements.length; i++) {
+      menuElements[i].addEventListener('click', () => {
+        menuPointerText.innerText = menuElements[i].getAttribute('data-content');
+        menuPointerTriangle.style.left = `calc(25px + 70px * ${i})`;
+      });
+    }
+  }
+</script>
