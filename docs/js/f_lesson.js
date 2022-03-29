@@ -1,16 +1,77 @@
 // Global variables
-const user_code_areas = CodeMirror(document.getElementById('user-code'), {
+const userCodeArea = CodeMirror(document.getElementById('user-code'), {
     lineNumbers: true,
-    tabSize: 4,
+    tabSize: 2,
     matchBrackets: true,
     mode: 'htmlmixed',
     theme: 'nord',
     lineWrapping: true,
-    matchBrackets: true
+    autoCloseTags: true,
+    autoCloseBrackets: true
 });
-const user_result_areas = document.querySelectorAll('iframe.user-result');
-const finished_example_areas = document.querySelectorAll('div.finished-example');
+const codeSection = document.querySelector('section.first-exercise');
+const userResultArea = document.querySelector('iframe.user-result');
+const finishedExampleArea = document.querySelector('div.finished-example');
+const navElements = document.querySelectorAll('menu.nav-menu > li');
+const imageCode = document.querySelector('div.finished-example > img');
+const mailSender = document.querySelector('section.mail-sender');
+const mailSenderTextarea = document.querySelector('section.mail-sender textarea');
+const copyButton = document.querySelector('button.copy-button');
+const userCode = ['', '', '']
+let currentExercise = 0;
 
-setInterval(() => {
-    user_result_areas[0].contentWindow.document.querySelector('body').innerHTML = user_code_areas.getValue();
-}, 1000);
+if (localStorage.getItem(`userCode${currentExercise}`)) {
+    userCodeArea.setValue(localStorage.getItem(`userCode${currentExercise}`));
+}
+else {
+    userCodeArea.setValue('');
+}
+userResultArea.contentWindow.document.open();
+userResultArea.contentWindow.document.write(userCodeArea.getValue());
+userResultArea.contentWindow.document.close();
+
+for (let i = 0; i < navElements.length - 1; i++) {
+    navElements[i].addEventListener('click', () => {
+        codeSection.style.display = 'block';
+        mailSender.style.display = 'none';
+        currentExercise = i;
+        //userCodeArea.setValue(userCode[currentExercise]);
+        if (localStorage.getItem(`userCode${currentExercise}`)) {
+            userCodeArea.setValue(localStorage.getItem(`userCode${currentExercise}`));
+        }
+        else {
+            userCodeArea.setValue('');
+        }
+        userResultArea.contentWindow.document.open();
+        userResultArea.contentWindow.document.write(userCodeArea.getValue());
+        userResultArea.contentWindow.document.close();
+        imageCode.setAttribute('src', `../img/exercise${i + 1}.gif`);
+    });
+}
+
+navElements[navElements.length - 1].addEventListener('click', () => {
+    codeSection.style.display = 'none';
+    mailSender.style.display = 'block';
+    if (localStorage.getItem(`userCode0`) && localStorage.getItem(`userCode1`) && localStorage.getItem(`userCode2`)) {
+        mailSenderTextarea.value = localStorage.getItem('userCode0').replace('script', 'gebroh') + '\n\n/*Koniec*/\n' + localStorage.getItem('userCode1').replace('script', 'gebroh') + '\n\n/*Koniec*/\n' + localStorage.getItem('userCode2').replace('script', 'gebroh') + '\n\n/*Koniec*/\n';
+    }
+});
+
+copyButton.addEventListener('click', () => {
+    mailSenderTextarea.select();
+    document.execCommand('copy');
+});
+
+userCodeArea.on('change', () => {
+    // userResultArea.contentWindow.document.body.innerHTML = userCodeArea.getValue();
+    userResultArea.contentWindow.location.reload();
+    userResultArea.contentWindow.document.open();
+    userResultArea.contentWindow.document.write(userCodeArea.getValue());
+    userResultArea.contentWindow.document.close();
+    userCode[currentExercise] = userCodeArea.getValue();
+    localStorage.setItem(`userCode${currentExercise}`, userCodeArea.getValue());
+});
+
+// setInterval(() => {
+//     userResultArea.contentWindow.document.body.innerHTML = userCodeArea.getValue();
+// }, 100);
