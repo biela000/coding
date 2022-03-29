@@ -52,9 +52,7 @@ for (let i = 0; i < navElements.length - 1; i++) {
 navElements[navElements.length - 1].addEventListener('click', () => {
     codeSection.style.display = 'none';
     mailSender.style.display = 'block';
-    if (localStorage.getItem(`userCode0`) && localStorage.getItem(`userCode1`) && localStorage.getItem(`userCode2`)) {
-        mailSenderTextarea.value = localStorage.getItem('userCode0').replace('script', 'gebroh') + '\n\n/*Koniec*/\n' + localStorage.getItem('userCode1').replace('script', 'gebroh') + '\n\n/*Koniec*/\n' + localStorage.getItem('userCode2').replace('script', 'gebroh') + '\n\n/*Koniec*/\n';
-    }
+    mailSenderTextarea.value = localStorage.getItem('userCode0') + '\n\n/*Koniec*/\n' + localStorage.getItem('userCode1') + '\n\n/*Koniec*/\n' + localStorage.getItem('userCode2') + '\n\n/*Koniec*/\n';
 });
 
 copyButton.addEventListener('click', () => {
