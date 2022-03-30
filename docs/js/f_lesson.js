@@ -45,7 +45,12 @@ for (let i = 0; i < navElements.length - 1; i++) {
         userResultArea.contentWindow.document.open();
         userResultArea.contentWindow.document.write(userCodeArea.getValue());
         userResultArea.contentWindow.document.close();
-        imageCode.setAttribute('src', `../img/exercise${i + 1}.gif`);
+        if (i > 1) {
+            imageCode.style.display = 'none';
+        }
+        else {
+            imageCode.setAttribute('src', `../img/exercise${i + 1}.gif`);
+        }
     });
 }
 

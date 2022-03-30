@@ -580,6 +580,18 @@ span.text {
     margin: 30px;
 }
 
+menu.vertical-menu-example1 {
+    height: 630px;
+} 
+
+menu.vertical-menu-example2 {
+    height: 150px;
+}
+
+article#slide6 div.article-content-wrapper > menu {
+    height: 40px;
+}
+
 @media screen and (max-width: 1350px) {
     article#slide1 div.article-content-wrapper, article#slide2 div.article-content-wrapper {
         font-size: 2vw;
