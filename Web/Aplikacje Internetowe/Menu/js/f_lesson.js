@@ -49,6 +49,7 @@ for (let i = 0; i < navElements.length - 1; i++) {
             imageCode.style.display = 'none';
         }
         else {
+            imageCode.style.display = 'block';
             imageCode.setAttribute('src', `../img/exercise${i + 1}.gif`);
         }
     });
