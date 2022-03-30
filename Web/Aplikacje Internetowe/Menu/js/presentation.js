@@ -726,9 +726,7 @@ for (let i = 0; i < tutorial_code.length; i++) {
         lineWrapping: true,
         readOnly: true
     }));
-    console.log(tutorial_code_iframes[i]);
     tutorial_code_iframes[i].contentWindow.document.designMode = 'on';
-    console.log(tutorial_code_iframes[i].contentWindow.document.body.innerHTML);
     // tutorial_code_place[i].setValue(tutorial_code_iframes[i].contentWindow.document.body.innerHTML);
     tutorial_code_place[i].setValue(code_fragments[i]);
     // console.log(code_fragments[i]);
