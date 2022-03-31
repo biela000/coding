@@ -1,0 +1,49 @@
+:root {
+    --code-area-height: 100px;
+}
+
+html {
+    max-height: 100vh;
+}
+
+body {
+    max-height: 100vh;
+}
+
+div.main-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+div.iframe-exercise-wrapper {
+    min-height: 300px;
+}
+
+iframe.iframe-exercise {
+    background-color: var(--bg-color-dark);
+    width: 100%;
+    height: 100%;
+}
+
+div.resizer {
+    height: 5px;
+    width: 100%;
+    background-color: var(--global-border-color);
+    cursor: row-resize;
+    transition: background-color 0.5s;
+}
+
+div.resizer:active {
+    background-color: var(--global-link-hover-color);
+}
+
+div.user-code-input-wrapper {
+    min-height: 100px;
+    max-height: 100%;
+    flex: 1 1 0%;
+}
+
+div.cm-s-nord {
+    height: var(--code-area-height);
+    max-height: var(--code-area-height);
+}

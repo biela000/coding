@@ -1,0 +1,211 @@
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+.body-container {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: #2E3440;
+  color: #D8DEE9;
+  text-align: center;
+}
+header h1 {
+  font-size: 4em;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  height: auto;
+  margin-top: 80px;
+  padding-bottom: 80px;
+}
+article {
+  width: 800px;
+  height: 400px;
+  background-color: #2E3440;
+  margin: auto;
+  color: #D8DEE9;
+}
+.main-article-container {
+  padding: 10px;
+}
+.main-article-content-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+article p {
+  display: inline-block;
+  width: 50%;
+}
+article img {
+  display: inline-block;
+  width: 45%;
+}
+#kapibara2 {
+  background-color: #BF616A;
+}
+#kapibara3 {
+  background-color: #D08770;
+}
+#kapibara4 {
+  background-color: #A3BE8C;
+}
+#kapibara5 {
+  background-color: #B48EAD;
+}
+  a {
+    text-decoration: none;
+    color: #D8DEE9;
+  }
+  .horizontal-sticky-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+		font-size: 1.7em;
+    padding: 10px 0;
+    position: relative;
+    z-index: 0;
+  }
+  .horizontal-sticky-menu > li {
+    border-radius: 20px;
+    z-index: 2;
+    transition: all 0.5s;
+  }
+  li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .pointer {
+    position: absolute;
+    background: #B48EAD;
+    width: 190px;
+    height: 54px;
+    z-index: 1;
+    left: 95px;
+    transition: transform 0.5s;
+  }
+  .horizontal-sticky-menu > li:hover {
+    background-color: rgba(180, 142, 173, 0.4);
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  nav {
+    background-color: #2E3440;
+  }
+  .paddingtop {
+    padding-top: 74px;
+  }
+</style>
+<div class="container body-container">
+  <header>
+    <div class="container header-container">
+      <h1>&lt;KAPIBARY&gt;</h1>
+      <nav>
+      	<div class="nav-container">
+          <menu class="horizontal-sticky-menu">
+            <li class="pointer"></li>
+          	<li><a href="#kapibara1">Kapibara 1</a></li>
+            <li><a href="#kapibara2">Kapibara 2</a></li>
+            <li><a href="#kapibara3">Kapibara 3</a></li>
+            <li><a href="#kapibara4">Kapibara 4</a></li>
+            <li><a href="#kapibara5">Kapibara 5</a></li>
+          </menu>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container main-container">
+      <article class="main-article" id="kapibara1">
+        <div class="container main-article-container">
+          <h2>&lt;KAPIBARY&gt;</h2>
+          <div class="main-article-content-container">
+            <p>Once in a lifetime you'll come across a film that truly captures the history and cultural distinctions of the modern world the way a person can subjectively perceive it through our guided field of perspective. I have to admit, I had my doubts when I first learned of the movie. After all, Capybara ok I pull up hop out at the after party? Will this movie even be good? How ignorant was I to even have these thoughts. Little did I know I was about to indulge in what may have been the best 10 seconds of my life.</p>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fboingboing.net%2Fwp-content%2Fuploads%2F2019%2F04%2Fcapy.jpg%3Ffit%3D641%252C337%26ssl%3D1&f=1&nofb=1">
+          </div>
+        </div>
+      </article>
+      <article class="main-article" id="kapibara2">
+      <div class="container main-article-container">
+          <h2>&lt;KAPIBARY&gt;</h2>
+          <div class="main-article-content-container">
+            <p>Once in a lifetime you'll come across a film that truly captures the history and cultural distinctions of the modern world the way a person can subjectively perceive it through our guided field of perspective. I have to admit, I had my doubts when I first learned of the movie. After all, Capybara ok I pull up hop out at the after party? Will this movie even be good? How ignorant was I to even have these thoughts. Little did I know I was about to indulge in what may have been the best 10 seconds of my life.</p>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fboingboing.net%2Fwp-content%2Fuploads%2F2019%2F04%2Fcapy.jpg%3Ffit%3D641%252C337%26ssl%3D1&f=1&nofb=1">
+          </div>
+        </div>
+      </article>
+      <article class="main-article" id="kapibara3">
+        <div class="container main-article-container">
+          <h2>&lt;KAPIBARY&gt;</h2>
+          <div class="main-article-content-container">
+            <p>Once in a lifetime you'll come across a film that truly captures the history and cultural distinctions of the modern world the way a person can subjectively perceive it through our guided field of perspective. I have to admit, I had my doubts when I first learned of the movie. After all, Capybara ok I pull up hop out at the after party? Will this movie even be good? How ignorant was I to even have these thoughts. Little did I know I was about to indulge in what may have been the best 10 seconds of my life.</p>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fboingboing.net%2Fwp-content%2Fuploads%2F2019%2F04%2Fcapy.jpg%3Ffit%3D641%252C337%26ssl%3D1&f=1&nofb=1">
+          </div>
+        </div>
+      </article>
+      <article class="main-article" id="kapibara4">
+        <div class="container main-article-container">
+          <h2>&lt;KAPIBARY&gt;</h2>
+          <div class="main-article-content-container">
+            <p>Once in a lifetime you'll come across a film that truly captures the history and cultural distinctions of the modern world the way a person can subjectively perceive it through our guided field of perspective. I have to admit, I had my doubts when I first learned of the movie. After all, Capybara ok I pull up hop out at the after party? Will this movie even be good? How ignorant was I to even have these thoughts. Little did I know I was about to indulge in what may have been the best 10 seconds of my life.</p>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fboingboing.net%2Fwp-content%2Fuploads%2F2019%2F04%2Fcapy.jpg%3Ffit%3D641%252C337%26ssl%3D1&f=1&nofb=1">
+          </div>
+        </div>
+      </article>
+      <article class="main-article" id="kapibara5">
+        <div class="container main-article-container">
+          <h2>&lt;KAPIBARY&gt;</h2>
+          <div class="main-article-content-container">
+            <p>Once in a lifetime you'll come across a film that truly captures the history and cultural distinctions of the modern world the way a person can subjectively perceive it through our guided field of perspective. I have to admit, I had my doubts when I first learned of the movie. After all, Capybara ok I pull up hop out at the after party? Will this movie even be good? How ignorant was I to even have these thoughts. Little did I know I was about to indulge in what may have been the best 10 seconds of my life.</p>
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fboingboing.net%2Fwp-content%2Fuploads%2F2019%2F04%2Fcapy.jpg%3Ffit%3D641%252C337%26ssl%3D1&f=1&nofb=1">
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+</div>
+<script>
+  {
+    const pointer = document.querySelector('.pointer');
+    const horizontalMenuElements = document.querySelectorAll('.horizontal-sticky-menu > li:not(.pointer) > a');
+    const mainContent = document.querySelector('main');
+    for (let i = 0; i < horizontalMenuElements.length; i++) {
+      horizontalMenuElements[i].addEventListener('click', () => {
+        pointer.style.transform = `translateX(calc(${i} * 381px))`;
+      });
+    }
+    const headerNav = document.querySelector('header nav');
+    const headerNavOffset = headerNav.offsetTop;
+    window.onscroll = () => {
+      if (window.pageYOffset >= headerNavOffset) {
+        headerNav.classList.add('sticky');
+        mainContent.classList.add('paddingtop');
+        document.querySelector('html').style.scrollPaddingTop = '90px';
+      }
+      else {
+        headerNav.classList.remove('sticky');
+        mainContent.classList.remove('paddingtop');
+        document.querySelector('html').style.scrollPaddingTop = 'unset';
+      }
+    }
+  }
+</script>

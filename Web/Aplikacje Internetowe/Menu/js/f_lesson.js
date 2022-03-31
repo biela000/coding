@@ -26,6 +26,7 @@ if (localStorage.getItem(`userCode${currentExercise}`)) {
 else {
     userCodeArea.setValue('');
 }
+
 userResultArea.contentWindow.document.open();
 userResultArea.contentWindow.document.write(userCodeArea.getValue());
 userResultArea.contentWindow.document.close();
@@ -68,7 +69,6 @@ copyButton.addEventListener('click', () => {
 
 userCodeArea.on('change', () => {
     // userResultArea.contentWindow.document.body.innerHTML = userCodeArea.getValue();
-    userResultArea.contentWindow.location.reload();
     userResultArea.contentWindow.document.open();
     userResultArea.contentWindow.document.write(userCodeArea.getValue());
     userResultArea.contentWindow.document.close();
