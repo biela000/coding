@@ -1,6 +1,10 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 <style>
   html {
     scroll-behavior: smooth;
+    font-family: 'Fira Code', monospace;
   }
 * {
   margin: 0;
@@ -120,6 +124,67 @@ article img {
   .paddingtop {
     padding-top: 74px;
   }
+  .side-menu-aside {
+    position: fixed;
+    top: 200px;
+  }
+  .vertical-sticky-menu {
+    background-color: #2E3440;
+    color: #D8DEE9;
+    list-style-type: none;
+    font-size: 1.8em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+  .vertical-sticky-menu > li:not(.vertical-pointer) {
+    height: 50%;
+    transition: transform 0.5s;
+    cursor: pointer;
+  	padding: 10px 10px 5px 10px;
+    border-radius: 20px;
+  }
+  .vertical-sticky-menu .capybara-colors menu > li {
+    transition: color 0.5s;
+  }
+  .vertical-sticky-menu .capybara-colors menu > li:hover {
+    color: #B48EAD;
+  }
+  .capybara-colors-container {
+    padding: 10px !important;
+  }
+  .vertical-pointer {
+    position: absolute;
+    width: 97%;
+    height: calc(50% - 5px);
+    background-color: #B48EAD;
+   	border-radius: 20px;
+    z-index: -1;
+  	left: 100px;
+    top: 5px;
+    transition: all 0.5s;
+  }
+  .active {
+    transform: translateX(95px);
+  }
+  .capybara-colors {
+		position: absolute;
+    font-size: 0.7em;
+    list-style-type: none;
+    display: none;
+    width: max-content;
+    gap: 20px;
+    background-color: rgba(46, 52, 64, 0.8);
+    top: 100%;
+    padding: 10px;
+  }
+  .capybara-colors menu {
+    list-style-type: none;
+  }
+  .capybara-colors-container:hover .capybara-colors {
+    display: flex;
+  }
 </style>
 <div class="container body-container">
   <header>
@@ -188,6 +253,43 @@ article img {
       </article>
     </div>
   </main>
+  <aside class="side-menu-aside">
+  	<div class="container side-menu-aside-container">
+      <menu class="vertical-sticky-menu">
+      	<li class="vertical-pointer"></li>
+        <li class="active">Kapibary</li>
+        <li class="capybara-colors-container">
+          Kolory kapibar
+        	<menu class="capybara-colors">
+          	<li>
+            	<h3>Kapibara 1</h3>
+              <menu>
+              	<li>Czerwony</li>
+              	<li>Niebieski</li>
+              	<li>Zielony</li>
+              </menu>
+            </li>
+            <li>
+            	<h3>Kapibara 2</h3>
+              <menu>
+              	<li>Czerwony</li>
+              	<li>Niebieski</li>
+              	<li>Zielony</li>
+              </menu>
+            </li>
+            <li>
+            	<h3>Kapibara 3</h3>
+              <menu>
+              	<li>Czerwony</li>
+              	<li>Niebieski</li>
+              	<li>Zielony</li>
+              </menu>
+            </li>
+          </menu>
+        </li>
+      </menu>
+    </div>
+  </aside>
 </div>
 <script>
   {
@@ -214,6 +316,25 @@ article img {
         mainContent.classList.remove('paddingtop');
         document.querySelector('html').style.scrollPaddingTop = 'unset';
       }
+    }
+    const verticalPointer = document.querySelector('.vertical-pointer');
+    const verticalMenuElements = document.querySelectorAll('.vertical-sticky-menu > li:not(.vertical-pointer)');
+		console.log(verticalMenuElements);
+    for (let i = 0; i < verticalMenuElements.length; i++) {
+      verticalMenuElements[i].addEventListener('click', () => {
+        if (i == 1) {
+          verticalPointer.style.transform = 'translateY(100%)'         
+        }
+        else {
+          //verticalPointer.style.bottom = 'unset';
+          //verticalPointer.style.top = '5px';
+          verticalPointer.style.transform = 'unset';
+        }
+        verticalMenuElements.forEach((menuForElement) => {
+          menuForElement.classList.remove('active');
+        });
+        verticalMenuElements[i].classList.add('active');
+      });
     }
   }
 </script>

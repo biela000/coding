@@ -12,7 +12,13 @@ const exerciseIframe = document.querySelector('iframe.iframe-exercise');
 const resizer = document.querySelector('.resizer');
 const topDiv = resizer.previousElementSibling;
 const bottomDiv = resizer.nextElementSibling;
-const defaultCode = `<style>
+const defaultCode = `<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+<style>
+html {
+  font-family: 'Fira Code', monospace;
+}
 * {
   margin: 0;
   padding: 0;
