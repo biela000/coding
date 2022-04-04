@@ -57,7 +57,7 @@ div.nav-wrapper > a {
     margin: auto;
 }
 
-div.nav-wrapper > a:hover {
+div.nav-wrapper > a:not(.nav-active):hover {
     color: var(--global-link-hover-color);
     border-color: var(--global-font-color);
 }
@@ -299,6 +299,10 @@ menu.vertical-menu-example > li > menu {
 
 menu.vertical-menu-example1 > li > menu {
     text-indent: 30px;
+}
+
+menu.vertical-menu-example3 {
+    height: 150px;
 }
 
 menu.vertical-menu-example2 > li, menu.vertical-menu-example3 > li {
@@ -590,6 +594,10 @@ menu.vertical-menu-example2 {
 
 article#slide6 div.article-content-wrapper > menu {
     height: 40px;
+}
+
+.nav-active {
+    background-color: var(--global-link-hover-color) !important;
 }
 
 @media screen and (max-width: 1350px) {

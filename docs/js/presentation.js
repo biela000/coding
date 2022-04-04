@@ -707,6 +707,16 @@ for (let i = 0; i < 2; i++) {
     });
 }
 
+// Add onclick events for nav elements
+for (let i = 0; i < document.querySelectorAll('div.nav-wrapper > a').length; i++) {
+    document.querySelectorAll('div.nav-wrapper > a')[i].addEventListener('click', () => {
+        document.querySelectorAll('div.nav-wrapper > a').forEach((navElement) => {
+            navElement.classList.remove('nav-active');
+        });
+        document.querySelectorAll('div.nav-wrapper > a')[i].classList.add('nav-active');
+    });
+}
+
 // Add onclick events for exemplary horizontal menu to recreate
 for (let i = 0; i < horizontal_menu_elements.length; i++) {
     const underline = document.querySelector('article#slide6 menu > li > span');
