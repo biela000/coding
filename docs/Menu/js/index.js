@@ -7,7 +7,7 @@ let left = false;
 for (let i = 0; i < lessons.length; i++) {
     lessons[i].addEventListener('mouseenter', () => {
         if (window.matchMedia('(min-width: 686px)')) {
-            lesson_display.innerText = `[${lessons[i].getAttribute('lesson').toUpperCase()}]`;
+            lesson_display.innerText = `[${lessons[i].getAttribute('data-lesson').toUpperCase()}]`;
             left = false;
         }
     });
