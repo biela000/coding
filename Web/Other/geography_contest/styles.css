@@ -42,7 +42,6 @@ input[type="text"] {
     outline: none;
     border: 2px solid var(--color4);
     pointer-events: unset;
-    transition: background-color 0.1s, color 0.5s;
     height: 40px;
     width: 100%;
     box-shadow: 1px -2px 5px 1px rgba(56,62,86,0.74);
@@ -50,6 +49,10 @@ input[type="text"] {
     color: var(--color1);
     padding: 0 10px;
     text-align: center;
+}
+
+input[type="text"]:disabled {
+    color: var(--color4);
 }
 
 .input-underline1, .input-underline2 {

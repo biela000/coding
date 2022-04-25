@@ -87,7 +87,6 @@ let countryNameCapitalMap = new Map([
     ["Kazachstan", "Nur-Sultan"],
     ["Kenia", "Nairobi"],
     ["Kirgistan", "Biszkek"],
-    ["Kiribati", "Bairiki"],
     ["Kolumbia", "Bogota"],
     ["Komory", "Moroni"],
     ["Kongo", "Brazzaville"],
@@ -201,6 +200,7 @@ let correctCapitalName = "Saint John's";
 function checkCountryAndCapitalInput() {
     return new Promise((resolve) => {
         const interval = setInterval(() => {
+            userCountryNameInput.disabled = false;
             userCountryNameInput.focus();
             if (userCountryNameInput.value.toLowerCase() === correctCountryName.toLowerCase()) {
                 userCountryNameInput.disabled = true;
@@ -211,14 +211,15 @@ function checkCountryAndCapitalInput() {
                 if (userCapitalNameInput.value.toLowerCase() === correctCapitalName.toLowerCase()) {
                     spans[1].style.backgroundColor = "green";
                     spans[1].style.transform = "scaleX(1)";
-                    userCountryNameInput.disabled = false;
                     userCapitalNameInput.disabled = true;
-                    if ((currentCountry.getAttribute("class") == undefined ? currentCountry.getAttribute("name") : currentCountry.getAttribute("class")) === correctCountryName) {
-                        spans[0].style.transform = "scaleX(0)";
-                        spans[1].style.transform = "scaleX(0)";
-                        currentCountry.style.fill = "var(--color4)";
-                        clearInterval(interval);
-                        resolve();
+                    if (currentCountry) {
+                        if ((currentCountry.getAttribute("class") == undefined ? currentCountry.getAttribute("name") : currentCountry.getAttribute("class")) === correctCountryName) {
+                            spans[0].style.transform = "scaleX(0)";
+                            spans[1].style.transform = "scaleX(0)";
+                            currentCountry.style.fill = "var(--color4)";
+                            clearInterval(interval);
+                            resolve();
+                        }
                     }
                 }
             }
@@ -228,13 +229,14 @@ function checkCountryAndCapitalInput() {
 const regex = / /gi;
 const startGame = async () => {
     countryNameCapitalMap = new Map([...countryNameCapitalMap.entries()].sort(function(a, b){return 0.5 - Math.random()}));
-    document.querySelector("button").innerText = "Restart";
+    document.querySelector(".start-button").innerText = "Restart";
     userCountryNameInput.disabled = false;
     userCountryNameInput.focus();
     spans[0].style.transform = "scaleX(0)";
     spans[1].style.transform = "scaleX(0)";
     userCountryNameInput.value = "";
     userCapitalNameInput.value = "";
+    console.log(currentCountry);
     if (currentCountry) {
         currentCountry.style.fill = "var(--color4)";
     }

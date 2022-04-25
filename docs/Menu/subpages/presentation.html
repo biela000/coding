@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Biela Jakub, Jurkowski Franciszek, Kafel Kasper">
+    <meta name="description" content="Introduction to working with HTML menus.">
+    <title>Menu</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CodeMirror stylesheets -->
+    <link rel="stylesheet" href="https://codemirror.net/lib/codemirror.css">
+    <link rel="stylesheet" href="https://codemirror.net/theme/nord.css"> 
+    <!-- Color scheme -->
+    <link rel="stylesheet" href="../nord/nord.css">
+    <!-- Global stylesheets -->
+    <link rel="stylesheet" href="../css/00-variables.css">
+    <link rel="stylesheet" href="../css/01-reset.css">
+    <link rel="stylesheet" href="../css/02-global.css">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="../css/04-presentation.css">
+    <!-- Script -->
+    <script src="../js/codemirror.js"></script>
+    <script src="https://codemirror.net/mode/xml/xml.js" defer></script>
+    <script src="https://codemirror.net/mode/css/css.js" defer></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js" defer></script>
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js" defer></script>
+    <script src="https://codemirror.net/addon/edit/matchbrackets.js"></script>
+    <script src="https://codemirror.net/addon/edit/closebrackets.js"></script>
+    <script src="https://codemirror.net/addon/edit/matchtags.js"></script>
+    <script src="https://codemirror.net/addon/edit/closetag.js"></script>
+    <script src="../js/presentation.js" defer></script>
+</head>
+<body>
+    <div class="wrapper body-wrapper">
+        <header>
+            <div class="wrapper header-wrapper">
+                <h1><a href="../index.html"><span style="color: var(--global-link-hover-color);">M</span>ENU</a></h1>
+                <nav>
+                    <div class="wrapper nav-wrapper">
+                        <!-- Hreflinks added in js -->
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper main-wrapper">
+                <article class="main-slide" id="slide1">
+                    <div class="wrapper article-wrapper">
+                        <h2>[co to menu?]</h2>
+                        <div class="wrapper article-content-wrapper">
+                            <p class="menu-p1">Niektóre strony internetowe potrafią nas nieźle zdezorientować, sprawić, że ciężko cokolwiek na nich znaleźć. Z drugiej strony są też te, które zapewniają nam niesamowity komfort przeglądania i pozwalają nam na płynne surfowanie po internecie.</p>
+                            <p class="menu-p2">Kiedy tworzymy stronę internetową, należy pamiętać, aby dostarczyć użytkownikowi prostą i bezproblemową nawigację. Jednym z elementów, które pełnią bardzo ważną rolę w doświadczeniu przekazywanemu użytkownikowi jest <span style="color: var(--global-link-hover-color); text-transform: uppercase;">[menu]</span>.</p>
+                            <p class="main-p3"><span style="color: var(--global-link-hover-color); text-transform: uppercase;">[menu]</span> to seria połączonych elementów, które służą do ułatwienia nawigacji w witrynie między różnymi stronami lub sekcjami witryny. Istnieje kilka rodzajów menu, w zależności od zawartości i wyglądu strony.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide" id="slide2">
+                    <div class="wrapper article-wrapper">
+                        <h2>[Typy menu]</h2>
+                        <div class="wrapper article-content-wrapper">
+                            <ul class="list">
+                                <li><span class="capital">klasyczne menu nawigacyjne</span>menu umieszczone w nagłówku strony, najczęściej jest jako pozioma lista</li>
+                                <li><span class="capital">sticky menu</span>podobne do menu nawigacyjnego, przyczepia się do góry strony. Idealnie nadaje się do długich stron</li>
+                                <li><span class="capital">menu boczne</span>menu umieszczone z boku strony</li>
+                                <li><span class="capital">hamburger menu</span>ikona składająca się z trzech poziomych linii, które rozwija się po kliknięciu. Używane najczęściej na stronach mobilnych, jednak można je spotkać również na stronach desktopowych</li>
+                                <li><span class="capital">menu rozwijane</span>menu w którym lista dodatkowych opcji otwiera się po kliknięciu lub najechaniu na element. Opcja ta sprawdza się na stronach z dużą ilością treści</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide" id="slide3">
+                    <div class="wrapper article-wrapper">
+                        <h2>[menu nawigacyjne]</h2>
+                        <div class="wrapper article-content-wrapper">
+                            <menu class="horizontal-menu-example horizontal-menu-example1">
+                                <li>
+                                    Główna
+                                </li>
+                                <li class="submenu-example1-container">
+                                    Produkty
+                                    <menu class="submenu-example1">
+                                        <li>
+                                            <h3>Programowanie</h3>
+                                            <menu>
+                                                <li>PC-ty</li>
+                                                <li>Laptopy</li>
+                                                <li>Tablety</li>
+                                                <li>Monitory</li>
+                                                <li>Smartfony</li>
+                                            </menu>
+                                        </li>
+                                        <li>
+                                            <h3>TV &amp; Wideo</h3>
+                                            <menu>
+                                                <li>Telewizory LED</li>
+                                                <li>Telewizory plazmowe</li>
+                                                <li>Telewizory 3D</li>
+                                                <li>Odtwarzacze DVD</li>
+                                                <li>Odtwarzacze Blu-Ray</li>
+                                            </menu>
+                                        </li>
+                                        <li>
+                                            <h3>Drukarki</h3>
+                                            <menu>
+                                                <li>Drukarki 3D</li>
+                                                <li>Drukarki 3D</li>
+                                                <li>Drukarki 3D</li>
+                                                <li>Drukarki 3D</li>
+                                                <li>Drukarki 3D</li>
+                                            </menu>
+                                        </li>
+                                    </menu>
+                                </li>
+                                <li>
+                                    O nas
+                                </li>
+                                <li>
+                                    Nowości
+                                </li>
+                                <li>
+                                    Kontakt
+                                </li>
+                            </menu>
+                            <menu class="horizontal-menu-example horizontal-menu-example2">
+                                <li>
+                                    Główna
+                                </li>
+                                <li class="submenu-example2-container">
+                                    Produkty
+                                    <menu class="submenu-example2">
+                                        <li>
+                                            <h3>Do kodu</h3>
+                                            <menu>
+                                                <li>PC-ty</li>
+                                                <li>Laptopy</li>
+                                                <li>Tablety</li>
+                                                <li>Monitory</li>
+                                                <li>Smartfony</li>
+                                            </menu>
+                                        </li>
+                                        <li>
+                                            <h3>TV &amp; Wideo</h3>
+                                            <menu>
+                                                <li>Telewizory LED</li>
+                                                <li>Telewizory plazmowe</li>
+                                                <li>Telewizory 3D</li>
+                                                <li>Odtwarzacze DVD</li>
+                                                <li>Odtwarzacze Blu-Ray</li>
+                                            </menu>
+                                        </li>
+                                        <li>
+                                            <h3>Drukarki</h3>
+                                            <menu>
+                                                <li>Drukarki 3D</li>
+                                                <li>Drukarki 3D</li>
+                                                <li>Drukarki 3D</li>
+                                                <li>Drukarki 3D</li>
+                                                <li>Drukarki 3D</li>
+                                            </menu>
+                                        </li>
+                                    </menu>
+                                </li>
+                                <li>
+                                    O nas
+                                </li>
+                                <li>
+                                    Nowości
+                                </li>
+                                <li>
+                                    Kontakt
+                                </li>
+                            </menu>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide" id="slide4">
+                    <div class="wrapper article-wrapper">
+                        <h2>[menu boczne]</h2>
+                        <div class="wrapper article-content-wrapper">
+                            <menu class="vertical-menu-example vertical-menu-example1">
+                                <li>
+                                    Urządzenia
+                                    <menu>
+                                        <li>PC</li>
+                                        <li>Laptopy</li>
+                                        <li>Tablety</li>
+                                        <li>Smartfony</li>
+                                        <li>LivePhone&trade;</li>
+                                    </menu>
+                                </li>
+                                <li>
+                                    Pokrowce
+                                    <menu>
+                                        <li>Białe</li>
+                                        <li>Zielone</li>
+                                        <li>Czarne</li>
+                                    </menu>
+                                </li>
+                                <li>
+                                    Kaszkiety
+                                    <menu>
+                                        <li>Klasyczne</li>
+                                        <li>Nowoczesne</li>
+                                        <li>Kuba</li>
+                                        <li>Warzecha</li>
+                                    </menu>
+                                </li>
+                            </menu>
+                            <menu class="vertical-menu-example vertical-menu-example2">
+                                <li>
+                                    Urządzenia
+                                    <menu>
+                                        <li>PC</li>
+                                        <li>Laptopy</li>
+                                        <li>Tablety</li>
+                                        <li>Smartfony</li>
+                                        <li>LivePhone&trade;</li>
+                                    </menu>
+                                </li>
+                                <li>
+                                    Pokrowce
+                                    <menu>
+                                        <li>Białe</li>
+                                        <li>Zielone</li>
+                                        <li>Czarne</li>
+                                    </menu>
+                                </li>
+                                <li>
+                                    Kaszkiety
+                                    <menu>
+                                        <li>Klasyczne</li>
+                                        <li>Nowoczesne</li>
+                                        <li>Kuba</li>
+                                        <li>Jakub</li>
+                                        <li>Warzecha</li>
+                                    </menu>
+                                </li>
+                            </menu>
+                            <menu class="vertical-menu-example vertical-menu-example3">
+                                <li>
+                                    Urządzenia
+                                    <menu>
+                                        <li>PC</li>
+                                        <li>Laptopy</li>
+                                        <li>Tablety</li>
+                                        <li>Smartfony</li>
+                                        <li>
+                                            LivePhone&trade;
+                                            <menu>
+                                                <li>Telefon</li>
+                                                <li>Zestaw</li>
+                                                <li>Box</li>
+                                            </menu>
+                                        </li>
+                                    </menu>
+                                </li>
+                                <li>
+                                    Pokrowce
+                                    <menu>
+                                        <li>Białe</li>
+                                        <li>Zielone</li>
+                                        <li>Czarne</li>
+                                    </menu>
+                                </li>
+                                <li>
+                                    Kaszkiety
+                                    <menu>
+                                        <li>Klasyczne</li>
+                                        <li>Nowoczesne</li>
+                                        <li>Kuba</li>
+                                        <li>Jakub</li>
+                                        <li>Warzecha</li>
+                                    </menu>
+                                </li>
+                            </menu>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide" id="slide5">
+                    <div class="wrapper article-wrapper">
+                        <h2>[hamburger menu]</h2>
+                        <div class="wrapper article-content-wrapper">
+                            <menu class="hamburger-example-menu hamburger-example-menu1">
+                                <li>PC-ty</li>
+                                <li>Tablety</li>
+                                <li>Smartfony</li>
+                                <li>Tablety</li>
+                                <li>Pralki</li>
+                                <li>Telewizory</li>
+                                <li>Systemy audio</li>
+                                <li>Klawiatury</li>
+                            </menu>
+                            <div class="hamburger-example hamburger-example1">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="hamburger-example hamburger-example2">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <menu class="hamburger-example-menu hamburger-example-menu2">
+                                <li>PC-ty</li>
+                                <li>Tablety</li>
+                                <li>Smartfony</li>
+                                <li>Tablety</li>
+                                <li>Pralki</li>
+                                <li>Telewizory</li>
+                                <li>Systemy audio</li>
+                                <li>Klawiatury</li>
+                            </menu>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide" id="slide6">
+                    <div class="wrapper article-wrapper">
+                        <h2>[jak stworzyć menu nawigacyjne]</h2>
+                        <div class="wrapper article-content-wrapper">
+                            <menu>
+                                <li>
+                                    Główna
+                                    <span></span>
+                                </li>
+                                <li>
+                                    Produkty
+                                    <menu>
+                                        <li>
+                                            <h3>Programowanie</h3>
+                                            <menu>
+                                                <li>PC-ty</li>
+                                                <li>Laptopy</li>
+                                                <li>Tablety</li>
+                                                <li>Smartfony</li>
+                                                <li>Klawiatury</li>
+                                            </menu>
+                                        </li>
+                                        <li>
+                                            <h3>TV &amp; Wideo</h3>
+                                            <menu>
+                                                <li>Telewizory LED</li>
+                                                <li>Telewizory plazmowe</li>
+                                                <li>Telewizory 3D</li>
+                                                <li>Odtwarzacze DVD</li>
+                                                <li>Odtwarzacze Blu-Ray</li>
+                                            </menu>
+                                        </li>
+                                        <li>
+                                            <h3>Drukarki</h3>
+                                            <menu>
+                                                <li>Drukarki 3D</li>
+                                                <li>
+                                                    Drukarki 3D
+                                                </li>
+                                                <li>
+                                                    Drukarki 3D
+                                                </li>
+                                                <li>
+                                                    Drukarki 3D
+                                                </li>
+                                                <li>
+                                                    Drukarki 3D
+                                                </li>
+                                            </menu>
+                                        </li>
+                                    </menu>
+                                </li>
+                                <li>O nas</li>
+                                <li>Nowości</li>
+                                <li>Kontakt</li>
+                            </menu>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide7">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 1 - html]</h2>
+                        <h3>Zapisujemy początkowy szkielet menu w HTML.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="horizontal-tutorial-code tutorial-code" id="tutorial-code1"></div>
+                            <iframe class="horizontal-tutorial-iframe tutorial-iframe" src="presentation-examples/00-horizontal.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide8">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 2 - css]</h2>
+                        <h3>Dodajemy style do głównej części menu.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="horizontal-tutorial-code tutorial-code" id="tutorial-code2"></div>
+                            <iframe class="horizontal-tutorial-iframe tutorial-iframe" src="presentation-examples/01-horizontal.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide9">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 3 - html, css, js]</h2>
+                        <h3>Dodajemy wskaźnik aktualnie wybranej opcji w menu.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="horizontal-tutorial-code tutorial-code" id="tutorial-code3"></div>
+                            <iframe class="horizontal-tutorial-iframe tutorial-iframe" src="presentation-examples/02-horizontal.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide10">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 4 - html, css]</h2>
+                        <h3>Uszczególniamy szkielet strony w HTML-u i dodajemy mu style zapewniające poprawne działanie.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="horizontal-tutorial-code tutorial-code" id="tutorial-code4"></div>
+                            <iframe class="horizontal-tutorial-iframe tutorial-iframe" src="presentation-examples/03-horizontal.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide11">
+                    <div class="wrapper article-wrapper">
+                        <h2>[jak stworzyć menu boczne]</h2>
+                        <div class="wrapper article-content-wrapper">
+                            <menu class="recreated-vertical-menu">
+                                <li class="indicator"></li>
+                                <li class="active">
+                                    <a href="#slide11">
+                                        <span class="text">
+                                            HOME
+                                        </span>
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#slide11">
+                                        <span class="text">
+                                            NAV
+                                        </span>
+                                        <ion-icon name="compass-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#slide11">
+                                        <span class="text">
+                                            STATS
+                                        </span>
+                                        <ion-icon name="podium-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#slide11">
+                                        <span class="text">
+                                            WIN
+                                        </span>
+                                        <ion-icon name="trophy-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#slide11">
+                                        <span class="text">
+                                            SET
+                                        </span>
+                                        <ion-icon name="construct-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#slide11">
+                                        <span class="text">
+                                            VIP
+                                        </span>
+                                        <ion-icon name="diamond-outline"></ion-icon>
+                                    </a>
+                                </li>
+                            </menu>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide12">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 1 - html]</h2>
+                        <h3>Określamy początkowy szkielet menu i załączamy skrypty odpowiedzialne za dodanie ikon.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="vertical-tutorial-code tutorial-code" id="tutorial-code5"></div>
+                            <iframe class="vertical-tutorial-iframe tutorial-iframe" src="presentation-examples/00-vertical.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide13">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 2 - css]</h2>
+                        <h3>Dodajemy początkowe, ogólne style do menu.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="vertical-tutorial-code tutorial-code" id="tutorial-code6"></div>
+                            <iframe class="vertical-tutorial-iframe tutorial-iframe" src="presentation-examples/01-vertical.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide14">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 3 - html, css]</h2>
+                        <h3>Dodajemy element wskaźnika w html-u i nadajemy mu podstawowe style.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="vertical-tutorial-code tutorial-code" id="tutorial-code7"></div>
+                            <iframe class="vertical-tutorial-iframe tutorial-iframe" src="presentation-examples/02-vertical.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide15">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 4 - html, js]</h2>
+                        <h3>Zapewniamy funkcjonalność wskaźnikowi, animujemy ikony menu.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="vertical-tutorial-code tutorial-code" id="tutorial-code8"></div>
+                            <iframe class="vertical-tutorial-iframe tutorial-iframe" src="presentation-examples/03-vertical.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+                <article class="main-slide codemirror-slide" id="slide16">
+                    <div class="wrapper article-wrapper">
+                        <h2>[krok 5 - html, css]</h2>
+                        <h3>Dodajemy tekst odpowiadający każdej ikonce menu i go animujemy.</h3>
+                        <div class="wrapper article-content-wrapper">
+                            <div class="vertical-tutorial-code tutorial-code" id="tutorial-code9"></div>
+                            <iframe class="vertical-tutorial-iframe tutorial-iframe" src="presentation-examples/04-vertical.html"></iframe>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <!-- <footer>
+            <div class="wrapper footer-wrapper">
+                <h3>&copy; Biela Jakub, Jurkowski Franciszek, Kafel Kasper 2022</h3>
+            </div>
+        </footer> -->
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

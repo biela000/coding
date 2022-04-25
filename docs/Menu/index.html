@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Biela Jakub, Jurkowski Franciszek, Kafel Kasper">
+    <meta name="description" content="Introduction to working with HTML menus.">
+    <title>Menu</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--by the power of UNIX I shall bypass restrictions-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Color scheme -->
+    <link rel="stylesheet" href="nord/nord.css">
+    <!-- Global stylesheets -->
+    <link rel="stylesheet" href="css/00-variables.css">
+    <link rel="stylesheet" href="css/01-reset.css">
+    <link rel="stylesheet" href="css/02-global.css">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="css/03-index.css">
+    <!-- Script -->
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <div class="wrapper body-wrapper">
+        <header>
+            <div class="wrapper header-wrapper">
+                <h1><a href="#"><span style="color: var(--global-link-hover-color);">M</span>ENU</a></h1>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper main-wrapper">
+                <menu class="lessons-menu">
+                    <li class="selected-lesson">[WYBIERZ]</li>
+                    <li class="presentation"><a href="subpages/presentation.html" class="lessons-link presentation-link" lesson="prezentacja"></a></li>
+                    <li class="lesson1"><a href="subpages/f_lesson.html" class="lessons-link" lesson="lekcja_1"></a></li>
+                    <li class="lesson2"><a href="subpages/s_lesson.html" class="lessons-link lessons-link2" lesson="lekcja_2"></a></li>
+                </menu>
+                <aside class="horizontal-menu-aside">
+                    <div class="wrapper menu-aside-wrapper horizontal-menu-aside-wrapper">
+                        <menu class="example-menu horizontal-example-menu">
+                            <li>
+                                Przykład 1
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Przykład 2
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Przykład 3
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Przykład 4
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Przykład 5
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                        </menu>
+                    </div>
+                </aside>
+                <aside class="vertical-menu-aside">
+                    <div class="wrapper menu-aside-wrapper vertical-menu-aside-wrapper">
+                        <menu class="example-menu vertical-example-menu">
+                            <li>
+                                Przykład 1
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Przykład 2
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Przykład 3
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Przykład 4
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Przykład 5
+                                <ul>
+                                    <li>Jeden</li>
+                                    <li>Dwa</li>
+                                    <li>Trzy</li>
+                                    <li>Cztery</li>
+                                </ul>
+                            </li>
+                        </menu>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <footer>
+            <div class="wrapper footer-wrapper">
+                <h3>&copy; Biela Jakub, Jurkowski Franciszek, Kafel Kasper 2022</h3>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
