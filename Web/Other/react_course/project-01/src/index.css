@@ -1,0 +1,97 @@
+:root {
+    --color1: #1c1e25;
+    --color2: #65d0ec;
+    --color3: #23272d;
+    --color4: #dce2ea;
+}
+
+* { padding: 0; margin: 0; box-sizing: border-box; }
+
+html {
+    font-family: "Inter", sans-serif;
+    color: #fdfeff;
+}
+
+body {
+    background-color: var(--color3);
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.header-nav {
+    background-color: var(--color1);
+}
+
+.header-nav-wrapper {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.nav-logo {
+    width: 60px;
+}
+
+.nav-major-heading {
+    color: var(--color2);
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.nav-minor-heading {
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--color4);
+}
+
+.content-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main-logo {
+    width: 350px;
+    filter: saturate(0.2);
+    opacity: 0.1;
+    position: absolute;
+    right: -175px;
+}
+
+.content-main-wrapper {
+    padding: 75px 25px;
+}
+
+.main-major-heading {
+    font-size: 3em;
+}
+
+.main-funfact-list {
+    list-style-type: none;
+    margin: 50px 0 0 80px;
+    font-size: 1.3em;
+}
+
+.main-funfact-list > li {
+    position: relative;
+}
+
+.main-funfact-list > li:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+.main-funfact-list > li::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    background-color: var(--color2);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,16 @@
+.nav-items {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-items-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.nav-image {
+    width: 80px;
+}

@@ -1,0 +1,98 @@
+:root {
+    --color1: #082032;
+    --color2: #2C394B;
+    --color3: #334756;
+    --color4: #FF4C29;
+}
+
+* { padding: 0; margin: 0; box-sizing: border-box; }
+
+html {
+    font-family: "Poppins", sans-serif;
+    color: #DADEDF;
+}
+
+body {
+    background-color: var(--color1);
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    margin: 25px auto;
+    background-color: var(--color2);
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.profile-picture {
+    width: 100%;
+}
+
+.info-devname {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.info-devtype {
+    color: var(--color4);
+    text-align: center;
+    font-weight: 400;
+}
+
+.info-devlink {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.info-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.info-buttons-container > button {
+    width: 125px;
+    height: 40px;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.faicon {
+    margin-right: 5px;
+}
+
+.info-email-button {
+    background-color: #DADEDF;
+}
+
+.info-linkedin-button {
+    background-color: var(--color4);
+    color: #DADEDF;
+}
+
+.about, .interests {
+    margin: 10px 40px 0 40px;
+}
+
+.footer {
+    background-color: var(--color3);
+    margin-top: 20px;
+    height: 50px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    font-size: 2em;
+}
