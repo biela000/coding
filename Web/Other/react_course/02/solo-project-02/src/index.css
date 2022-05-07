@@ -1,0 +1,84 @@
+:root {
+    --header-background-color: #f55a5a;
+    --link-color: #918e9b;
+    --font-color: #2b283a;
+    --header-font-color: #ffffff;
+    --background-color: #f5f5f5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Karla", sans-serif;
+    color: var(--font-color);
+}
+
+.site-header {
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+    padding: 25px 0;
+}
+
+.site-heading {
+    text-align: center;
+    font-size: 2em;
+}
+
+.site-header-faicon {
+    margin-right: 5px;
+}
+
+.place-image {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--header-background-color);
+}
+
+.place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 800px;
+    margin: 20px auto;
+}
+
+.place-details {
+    font-size: 1.3em;
+}
+
+.place-faicon {
+    color: var(--header-background-color);
+    margin-right: 5px;
+}
+
+.place-country {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+.place-name {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.place-dates {
+    margin-bottom: 10px;
+}

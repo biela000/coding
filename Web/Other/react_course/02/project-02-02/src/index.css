@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+#root {
+    margin: 20px;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    place-items: center;
+}
+
+.contact-card {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 15px;
+}
+
+.contact-photo {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.contact-name {
+    margin-top: 20px;
+    font-size: 1.7em;
+}
+
+.contact-phonenumber {
+    margin-top: 25px;
+}
+
+.contact-email {
+    margin-top: 10px;
+}
+
+.faicon {
+    margin-right: 15px;
+}

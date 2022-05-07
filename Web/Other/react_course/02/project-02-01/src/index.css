@@ -1,0 +1,104 @@
+:root {
+    --logo-color: #ff5a5f;
+    --bg-color: #e5e5e5;
+    --header-bg-color: #ffffff;
+    --font-color: #222222;
+    --hero-header-font-color: #000000;
+    --detail-text-color: #918e9b;
+    --star-color: #fe395c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    color: var(--font-color);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.root-wrapper {
+    padding-bottom: 20px;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    padding: 25px;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    width: 120px;
+}
+
+.hero {
+    margin: 20px 40px 0 40px;
+}
+
+.photo-grid {
+    display: block;
+    width: 80%;
+    min-width: 400px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.major-hero-heading {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.hero-subheading {
+    font-size: 1.2em;
+    font-weight: 200;
+    width: 400px;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    margin: 60px 40px 0 40px;
+    position: relative;
+}
+
+.spot-state {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: var(--header-bg-color);
+    padding: 2px 10px;
+    font-size: 0.85em;
+    border-radius: 3px;
+    font-weight: 300;
+}
+
+.card-photo {
+    height: 300px;
+    border-radius: 15px;
+}
+
+.card-review-country,
+.card-description {
+    font-weight: 200;
+    font-size: 0.85em;
+}
+
+.card-price {
+    font-size: 0.85em;
+}
+
+.card-review-country::first-letter {
+    color: var(--star-color);
+}
+
+.card-country-subsection {
+    color: var(--detail-text-color);
+}

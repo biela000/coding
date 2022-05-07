@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-color: #353940;
+}
+
+.jokes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.joke {
+    background-color: #dfe0d4;
+    color: #353940;
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.joke-setup-heading,
+.joke-punchline-heading {
+    color: #ff5335;
+}
+
+.joke-setup-heading + .joke-setup {
+    margin-bottom: 20px;
+}
