@@ -1,0 +1,70 @@
+.app {
+    width: 80%;
+}
+
+.question--question-section {
+    display: block;
+    background-color: var(--bg-color-light);
+    min-height: 12em;
+    font-size: 1.3em;
+    border-radius: 1em;
+    color: var(--border-color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.question--answer-section {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25em;
+    gap: 10px;
+    margin-top: 1em;
+    color: var(--border-color-light);
+    overflow-x: scroll;
+}
+
+.question--answer-section--answer {
+    background-color: var(--bg-color-light);
+    width: 100%;
+    border-radius: 1em;
+}
+
+.question--answer-section--answer--answer-radio {
+    display: none;
+}
+
+.question--answer-section--answer--answer-text {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.question--next-question-button {
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.75em 1em;
+    background-color: var(--border-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 0.75em;
+    text-align: left;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.question--answer-section--answer--answer-radio:checked
+    + .question--answer-section--answer--answer-text {
+    background-color: var(--border-color);
+    color: var(--bg-color);
+}
+
+.disable-events {
+    pointer-events: none;
+}
