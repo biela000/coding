@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/coding/static/css/main.569fb072.css",
-    "main.js": "/coding/static/js/main.1060b0d7.js",
-    "index.html": "/coding/index.html",
-    "main.569fb072.css.map": "/coding/static/css/main.569fb072.css.map",
-    "main.1060b0d7.js.map": "/coding/static/js/main.1060b0d7.js.map"
+    "main.css": "/coding/hangman/static/css/main.b62271ca.css",
+    "main.js": "/coding/hangman/static/js/main.44e0572f.js",
+    "static/media/wisielec10.png": "/coding/hangman/static/media/wisielec10.a73c173734fd8b1d408f.png",
+    "static/media/wisielec9.png": "/coding/hangman/static/media/wisielec9.f4dd0b75567191c1da1b.png",
+    "static/media/wisielec8.png": "/coding/hangman/static/media/wisielec8.dd6420f66119f015e48e.png",
+    "static/media/wisielec7.png": "/coding/hangman/static/media/wisielec7.3945468624e00d5fd8bb.png",
+    "static/media/wisielec4.png": "/coding/hangman/static/media/wisielec4.86bee0a188b1aeb946e6.png",
+    "static/media/wisielec6.png": "/coding/hangman/static/media/wisielec6.771cd4a806e9d6913bfc.png",
+    "static/media/wisielec5.png": "/coding/hangman/static/media/wisielec5.04b8ba0d41b7ad3602f0.png",
+    "static/media/wisielec3.png": "/coding/hangman/static/media/wisielec3.63f4271273b4e4170ef9.png",
+    "static/media/wisielec2.png": "/coding/hangman/static/media/wisielec2.e0e5249bac98e04f7626.png",
+    "static/media/wisielec1.png": "/coding/hangman/static/media/wisielec1.79a5263d169e01d96157.png",
+    "index.html": "/coding/hangman/index.html",
+    "main.b62271ca.css.map": "/coding/hangman/static/css/main.b62271ca.css.map",
+    "main.44e0572f.js.map": "/coding/hangman/static/js/main.44e0572f.js.map"
   },
   "entrypoints": [
-    "static/css/main.569fb072.css",
-    "static/js/main.1060b0d7.js"
+    "static/css/main.b62271ca.css",
+    "static/js/main.44e0572f.js"
   ]
 }
