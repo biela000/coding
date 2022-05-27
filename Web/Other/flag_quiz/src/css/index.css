@@ -1,0 +1,41 @@
+:root {
+    --color1: #112b3c;
+    --color2: #205375;
+    --color3: #e66b0e;
+    --color4: #efefef;
+}
+.rsm-svg > path {
+    fill: var(--color2);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    overflow-y: hidden;
+    background-color: var(--color1);
+}
+
+.app {
+    width: 90%;
+    margin: auto;
+}
+
+.guess-area {
+    width: 400px;
+    position: absolute;
+    bottom: 200px;
+    left: 20px;
+}
+
+.country-flag-img {
+    display: block;
+    width: 100%;
+}

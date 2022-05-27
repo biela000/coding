@@ -1,0 +1,14 @@
+.map {
+    overflow: hidden;
+}
+
+.rsm-svg {
+    width: 1400px;
+    margin-top: -10%;
+}
+
+.rsm-svg path {
+    fill: var(--color2);
+    stroke: var(--color4);
+    stroke-width: 0.5px;
+}
