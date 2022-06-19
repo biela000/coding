@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            min-height: 100%;
+        }
+        body {
+            height: 100%;
+            background-color: #F9F2ED;
+        }
+        .car-list {
+            width: 20%;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .car-list > li {
+            cursor: pointer;
+            background-color: #FFB562;
+            padding: 10px;
+            transition: all 0.5s;
+        }
+        .car-list > li:hover {
+            background-color: #F87474;
+        }
+        .app {
+            padding: 25px;
+        }
+        ul {
+            list-style: none;
+        }
+        .car-info-content {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h1 class="prompt">Wybierz samochód!</h1>
+        <ul class="car-list">
+
+        </ul>
+        <div class="car-info-content">
+
+        </div>
+    </div>
+</body>
+<script>
+    const promptElement = document.querySelector(".prompt");
+    const DOMCarList = document.querySelector(".car-list");
+    const carInfoContent = document.querySelector(".car-info-content");
+    const carList = [
+        {name: "Audi", color: "red", productionYear: 2014, dist: 16100},
+        {name: "Toyota", color: "white", productionYear: 2013, dist: 36000},
+        {name: "Subaru", color: "darkgray", productionYear: 2015, dist: 47500},
+        {name: "Volvo", color: "blue", productionYear: 2019, dist: 22000},
+        {name: "Fiat", color: "darkgray", productionYear: 2010, dist: 242000},
+        {name: "BMW", color: "black", productionYear: 2005, dist: 142300}
+    ];
+    carList.forEach(car => {
+        const tmp = document.createElement("li");
+        tmp.innerText = car.name;
+        tmp.addEventListener("click", () => {
+            carInfoContent.innerHTML = `
+                <h3>Wybrano ${car.name}</h3>
+                <h3>Informacje szczegółowe</h3>
+                <ul class=\"car-info-list\">
+                    <li>Kolor: ${car.color}</li>
+                    <li>Rok produkcji: ${car.productionYear}</li>
+                    <li>Przebieg: ${car.dist}</li>
+                </ul>
+            `;
+        });
+        DOMCarList.append(tmp);
+    });
+</script>
+</html>

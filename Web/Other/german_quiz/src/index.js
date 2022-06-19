@@ -7,4 +7,4 @@ import "./css/quiz-page.css";
 import "./css/result-page.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />)
+root.render(<App />);

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biela Jakub - szablon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="root">
+        <header class="site-header">
+            <img src="img/logo.svg" alt="logo" class="logo">
+        </header>
+        <div class="main-section-wrapper">
+            <nav class="site-navigation">
+                <menu class="nav-menu">
+                    <li class="nav-menu-element">El 1</li>
+                    <li class="nav-menu-element">El 2</li>
+                    <li class="nav-menu-element">El 3</li>
+                    <li class="nav-menu-element nav-submenu-parent">
+                        El 4
+                        <menu class="nav-submenu">
+                            <li class="nav-submenu-element">Sub 1</li>
+                            <li class="nav-submenu-element">Sub 2</li>
+                            <li class="nav-submenu-element">Sub 3</li>
+                            <li class="nav-submenu-element">Sub 4</li>
+                        </menu>
+                    </li>
+                </menu>
+            </nav>
+            <main class="site-main">
+                MAIN
+            </main>
+            <aside class="site-aside">
+                <img src="img/car-logo1.jpg" alt="logo1">
+                <img src="img/car-logo2.png" alt="logo2">
+                <img src="img/car-logo3.png" alt="logo3">
+                <img src="img/car-logo4.png" alt="logo4">
+            </aside>
+        </div>
+        <footer class="site-footer-container">
+            <div class="site-footer1">
+                <form class="site-footer1-form">
+                    <fieldset class="login-info-fieldset">
+                        <legend>Dane logowania</legend>
+                        <div class="div-container">
+                            <label for="username-input">Login:</label>
+                            <input type="text" name="username" id="username-input">
+                        </div>
+                        <div class="div-container">
+                            <label for="password-input">Hasło:</label>
+                            <input type="password" name="password" id="password-input">
+                        </div>
+                    </fieldset>
+                    <fieldset class="user-sex-fieldset">
+                        <legend>Płeć</legend>
+                        <div class="div-container2">
+                            <input type="radio" name="female" id="female-radio">
+                            <label for="female-radio">Kobieta</label>
+                        </div>
+                        <div class="div-container2">
+                            <input type="radio" name="female" id="male-radio">
+                            <label for="male-radio">Mężczyzna</label>
+                        </div>
+                    </fieldset>
+                </form>
+                <button class="login-button">Login</button>
+            </div>
+            <div class="site-footer2">
+                <img src="img/text.svg" alt="tekst" class="text-img">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

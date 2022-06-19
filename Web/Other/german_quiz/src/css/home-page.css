@@ -38,3 +38,24 @@
         align-items: center;
     }
 }
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-bottom: 2em;
+}
+
+.input-container input {
+    background-color: var(--bg-color-light);
+    border: none;
+    padding: 1em;
+    border-radius: 1em;
+    width: 100%;
+    font-size: 1em;
+    color: var(--border-color-light);
+}
+
+.input-container input:focus {
+    outline: 2px solid var(--border-color);
+}

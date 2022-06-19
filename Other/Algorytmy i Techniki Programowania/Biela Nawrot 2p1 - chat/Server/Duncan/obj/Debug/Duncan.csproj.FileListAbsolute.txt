@@ -1,0 +1,91 @@
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\bin\Debug\Duncan.exe.config
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\bin\Debug\Duncan.exe
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\bin\Debug\Duncan.pdb
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\obj\Debug\Duncan.csprojAssemblyReference.cache
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\obj\Debug\Duncan.Form1.resources
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\obj\Debug\Duncan.Properties.Resources.resources
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\obj\Debug\Duncan.csproj.GenerateResource.cache
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\obj\Debug\Duncan.csproj.CoreCompileInputs.cache
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\obj\Debug\Duncan.exe
+C:\Users\Biela Jakub\source\repos\Duncan\Duncan\obj\Debug\Duncan.pdb
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\bin\Debug\Duncan.exe.config
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\bin\Debug\Duncan.exe
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\bin\Debug\Duncan.pdb
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.csprojAssemblyReference.cache
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.Properties.Resources.resources
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.csproj.GenerateResource.cache
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.csproj.CoreCompileInputs.cache
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.exe
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.pdb
+C:\Users\Biela Jakub\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.Form1.resources
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\bin\Debug\Duncan.exe.config
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\bin\Debug\Duncan.exe
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\bin\Debug\Duncan.pdb
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.csproj.AssemblyReference.cache
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.csproj.SuggestedBindingRedirects.cache
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.Form1.resources
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.Properties.Resources.resources
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.csproj.GenerateResource.cache
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.csproj.CoreCompileInputs.cache
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.exe
+C:\Users\Biela\OneDrive - Zespół Szkół Łączności\Duncan\Duncan\obj\Debug\Duncan.pdb
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\bin\Debug\index.html
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\bin\Debug\Duncan.exe.config
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\bin\Debug\Duncan.exe
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\bin\Debug\Duncan.pdb
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.csproj.AssemblyReference.cache
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.csproj.SuggestedBindingRedirects.cache
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.Form1.resources
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.Properties.Resources.resources
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.csproj.GenerateResource.cache
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.csproj.CoreCompileInputs.cache
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.exe
+C:\Users\Biela\Desktop\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.pdb
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\bin\Debug\index.html
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\bin\Debug\Duncan.exe.config
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\bin\Debug\Duncan.exe
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\bin\Debug\Duncan.pdb
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.csproj.AssemblyReference.cache
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.Form1.resources
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.Properties.Resources.resources
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.csproj.GenerateResource.cache
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.csproj.CoreCompileInputs.cache
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.exe
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\Projekt na jutro\Duncan\Duncan\obj\Debug\Duncan.pdb
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\bin\Debug\index.html
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\bin\Debug\Duncan.exe.config
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\bin\Debug\Duncan.exe
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\bin\Debug\Duncan.pdb
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.AssemblyReference.cache
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.SuggestedBindingRedirects.cache
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\obj\Debug\Duncan.Form1.resources
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\obj\Debug\Duncan.Properties.Resources.resources
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.GenerateResource.cache
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.CoreCompileInputs.cache
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\obj\Debug\Duncan.exe
+C:\Users\Biela\Desktop\duncan na jutro\Duncan\obj\Debug\Duncan.pdb
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\bin\Debug\index.html
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\bin\Debug\Duncan.exe.config
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\bin\Debug\Duncan.exe
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\bin\Debug\Duncan.pdb
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.AssemblyReference.cache
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\obj\Debug\Duncan.Form1.resources
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\obj\Debug\Duncan.Properties.Resources.resources
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.GenerateResource.cache
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.CoreCompileInputs.cache
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\obj\Debug\Duncan.exe
+C:\Users\kubie\OneDrive - Zespół Szkół Łączności\asdasd\duncan na jutro\Duncan\obj\Debug\Duncan.pdb
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\bin\Debug\index.html
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\bin\Debug\Duncan.exe.config
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\bin\Debug\Duncan.exe
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\bin\Debug\Duncan.pdb
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.AssemblyReference.cache
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\obj\Debug\Duncan.Form1.resources
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\obj\Debug\Duncan.Properties.Resources.resources
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.GenerateResource.cache
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\obj\Debug\Duncan.csproj.CoreCompileInputs.cache
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\obj\Debug\Duncan.exe
+C:\Users\kubie\coding\Other\Algorytmy i Techniki Programowania\duncan na jutro\Duncan\obj\Debug\Duncan.pdb

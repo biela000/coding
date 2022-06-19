@@ -4,9 +4,7 @@
     --color3: #e66b0e;
     --color4: #efefef;
 }
-.rsm-svg > path {
-    fill: var(--color2);
-}
+
 * {
     padding: 0;
     margin: 0;

@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Karla", sans-serif;
+}
+
+.root {
+    width: 80%;
+    margin: 2px auto;
+    border: 5px solid gold;
+}
+
+.site-header {
+    height: 250px;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.logo {
+    display: block;
+    margin: 1px auto;
+    width: 247px;
+}
+
+.site-navigation {
+    border-right: 2px solid black;
+    width: 20%;
+    height: 500px;
+}
+
+.nav-menu {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+menu {
+    list-style-type: none;
+}
+
+.nav-menu-element {
+    font-weight: 700;
+    background-color: #d3d3d3;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-menu-element:hover {
+    background-color: grey;
+}
+
+.nav-submenu {
+    display: none;
+}
+
+.nav-submenu-parent {
+    cursor: pointer;
+}
+
+.nav-submenu-parent:hover > .nav-submenu {
+    display: block;
+}
+.nav-submenu-element {
+    text-indent: 10px;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.main-section-wrapper {
+    display: flex;
+}
+
+.site-main {
+    width: 50%;
+    height: 500px;
+    border-right: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+.site-aside {
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 500px;
+}
+
+@media screen and (max-width: 1500px) {
+    .site-aside {
+        grid-template-columns: 1fr;
+    }
+}
+
+.site-footer-container {
+    height: 150px;
+    border-top: 2px solid black;
+    display: flex;
+}
+
+.site-footer1 {
+    width: 33%;
+    overflow: hidden;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-footer1-form {
+    display: flex;
+    width: 400px;
+    gap: 10px;
+    height: 100px;
+}
+
+.login-info-fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    gap: 10px;
+}
+
+#username-input,
+#password-input {
+    width: 60%;
+}
+
+.site-footer2 {
+    width: 66%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-container {
+    text-align: center;
+}
+
+legend {
+    margin-left: 10px;
+}
+
+.user-sex-fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    padding: 10px;
+    justify-content: flex-start;
+}
+
+.login-button {
+    padding: 5px 20px;
+}
+
+.text-img {
+    width: 80%;
+    max-width: 650px;
+    min-width: 200px;
+    display: block;
+}

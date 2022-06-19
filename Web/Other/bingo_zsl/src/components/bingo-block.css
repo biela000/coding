@@ -1,0 +1,14 @@
+.bingo-block {
+    width: 250px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    background-color: var(--bg2);
+    color: var(--fg);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checked {
+    pointer-events: none;
+}

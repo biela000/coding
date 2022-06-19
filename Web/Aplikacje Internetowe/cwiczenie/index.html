@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="s" id="s1" value="all" onchange="handleChange(this)">
+    <label for="s1">wszystkie</label>
+    <input type="radio" name="s" id="s2" value="name" onchange="handleChange(this)">
+    <label for="s2">tylko imię</label>
+    <input type="radio" name="s" id="s3" value="age" onchange="handleChange(this)">
+    <label for="s3">tylko wiek</label>
+    <p class="result"></p>
+    <script>
+        const tablicazpanami = [];
+        function handleChange(target) {
+            document.querySelector(".result").innerText = "Result: " + event.value;
+        }
+    </script>
+</body>
+</html>

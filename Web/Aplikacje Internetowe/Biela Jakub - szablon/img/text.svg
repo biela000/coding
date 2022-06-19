@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="267.38501"
+   height="57.203999"
+   viewBox="0 0 70.745616 15.135225"
+   version="1.1"
+   id="svg70"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="text.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview72"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="5.1241863"
+     inkscape:cx="175.54007"
+     inkscape:cy="75.719339"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid216" />
+  </sodipodi:namedview>
+  <defs
+     id="defs67" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       id="path177"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       cx="25.094229"
+       cy="162.95758"
+       r="0.013755254" />
+    <circle
+       id="path179"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       cx="25.094229"
+       cy="162.95758"
+       r="0.013755254" />
+    <path
+       style="display:none;fill:#ffffff;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 25.135416,186.53125 c 0,0 17.197917,-14.55209 33.072917,0 15.874999,14.55208 37.041666,-2.64584 37.041666,-2.64584"
+       id="path7082" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.40972px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       id="text8692"
+       transform="translate(-23.71462,-177.25384)"><textPath
+         xlink:href="#path7082"
+         id="textPath17609"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.40972px;font-family:Calibri;-inkscape-font-specification:'Calibri, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583">BIELA JAKUB - BIELA JAKUB - BIELA JAKUB</textPath></text>
+  </g>
+</svg>

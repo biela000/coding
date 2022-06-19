@@ -1,44 +1,40 @@
-import { useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { useContext, useState } from "react";
+import { useForm } from "@formspree/react";
 
 export default function ResultForm(props) {
+    const answers = useContext(props.answerContext);
     const [state, handleSubmit] = useForm("xwkyaakl", {
-        answers: props.answers,
-        result: props.result
+        data: {
+            answers: answers,
+            result: props.result,
+        },
     });
     const [formElements, setFormElements] = useState({
-        email: "",
         firstName: "",
-        lastName: ""
+        lastName: "",
     });
-    console.log(props.answers);
     if (state.succeeded) {
-        return <h2>Przesłano wyniki</h2>;
+        return <h2 className="successful-send">Przesłano wyniki</h2>;
     }
     function handleChange(event) {
-        const {name, value} = event.target;
-        setFormElements(prevFormElements => {
+        const { name, value } = event.target;
+        setFormElements((prevFormElements) => {
             return {
                 ...prevFormElements,
-                [name]: value
-            }
+                [name]: value,
+            };
         });
     }
+    // const word = "oto";
+    // if (word === [...word].reverse().join("")) console.log("palindrom");
+    // const indexes = [];
+    // const osoby = ["Dawid", "Dawid", "Dawid", "Dawid", "Dawid"];
+    // for (let i = 0; i < osoby.length; i++) {
+    //     if (osoby[i] === "Dawid") indexes.push(i);
+    // }
+    // console.log("Dawid został odnaleziony na miejscach: " + indexes);
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                value={formElements.email}
-                placeholder="Adres email"
-                required={true}
-            />
-            <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-            />
+        <form className="result-form" onSubmit={handleSubmit}>
             <input
                 type="text"
                 name="firstName"
