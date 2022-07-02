@@ -1,8 +1,9 @@
+import { useState } from "react";
 import ExpenseList from "./components/Expenses/ExpenseList";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
-    const expenses = [
+    const [expenses, setExpenses] = useState([
         {
             id: "e1",
             title: "Toilet Paper",
@@ -27,10 +28,17 @@ const App = () => {
             amount: 450,
             date: new Date(2021, 5, 12),
         },
-    ];
+    ]);
+    const saveExpenseDataHandler = (newExpense) => {
+        setExpenses((prevExpenses) => {
+            newExpense.date = new Date(newExpense.date);
+            newExpense.id = "e" + (prevExpenses.length + 1);
+            return [...prevExpenses, newExpense];
+        });
+    };
     return (
         <div className="app">
-            <NewExpense />
+            <NewExpense onSaveExpenseData={saveExpenseDataHandler} />
             <ExpenseList expenses={expenses} />
         </div>
     );
