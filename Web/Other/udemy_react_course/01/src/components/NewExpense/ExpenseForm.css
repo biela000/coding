@@ -1,0 +1,44 @@
+.expense-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.expense-form--controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 15px;
+    width: 80%;
+}
+
+.expense-form--control > label {
+    font-weight: 600;
+    font-size: 1.5em;
+    display: block;
+}
+
+.expense-form--control > input {
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.7em;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.expense-form--actions {
+    align-self: flex-end;
+}
+
+.expense-form--actions > button {
+    padding: 25px 50px;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 15px;
+    background-color: #620119;
+    color: #ffffff;
+}

@@ -1,0 +1,23 @@
+.expense-item {
+    background-color: #444444;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.expense-item--description {
+    font-size: 1.1em;
+    color: #ededed;
+    flex-grow: 1;
+}
+
+.expense-item--price {
+    background-color: #620119;
+    border-radius: 10px;
+    font-size: 1.5em;
+    padding: 10px 25px;
+    color: #ededed;
+    border: 1px solid #ededed;
+    font-weight: 600;
+}
