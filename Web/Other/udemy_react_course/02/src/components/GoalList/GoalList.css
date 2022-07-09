@@ -1,0 +1,7 @@
+.goal-list {
+    width: 50%;
+    margin: 70px auto 0 auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}

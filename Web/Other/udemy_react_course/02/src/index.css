@@ -1,0 +1,23 @@
+:root {
+    --color1: #f9f2ed;
+    --color2: #3ab0ff;
+    --color3: #ffb562;
+    --color4: #f87474;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+html {
+    font-family: "DM Sans", sans-serif;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: var(--color1);
+}
