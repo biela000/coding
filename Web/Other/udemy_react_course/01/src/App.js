@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ExpenseList from "./components/Expenses/ExpenseList";
 import NewExpense from "./components/NewExpense/NewExpense";
+import Filter from "./components/Filter/Filter";
 
 const App = () => {
     const [expenses, setExpenses] = useState([
@@ -33,13 +34,21 @@ const App = () => {
         setExpenses((prevExpenses) => {
             newExpense.date = new Date(newExpense.date);
             newExpense.id = "e" + (prevExpenses.length + 1);
-            return [...prevExpenses, newExpense];
+            return [newExpense, ...prevExpenses];
         });
     };
+    const [filteredYear, setFilteredYear] = useState("2022");
+    const filteredExpenses = expenses.filter((expense) => {
+        return expense.date.getFullYear().toString() === filteredYear;
+    });
     return (
         <div className="app">
             <NewExpense onSaveExpenseData={saveExpenseDataHandler} />
-            <ExpenseList expenses={expenses} />
+            <Filter
+                filteredYearState={{ filteredYear, setFilteredYear }}
+                expenses={filteredExpenses}
+            />
+            <ExpenseList expenses={filteredExpenses} />
         </div>
     );
 };

@@ -24,6 +24,7 @@ const ExpenseForm = (props) => {
             amount: "",
             date: "",
         });
+        props.onActivationStateChange();
     };
     return (
         <form className="expense-form" onSubmit={submitHandler}>
@@ -36,6 +37,7 @@ const ExpenseForm = (props) => {
                         id="title"
                         value={expenseFormValues.title}
                         onChange={changeHandler}
+                        required={true}
                     />
                 </div>
                 <div className="expense-form--control">
@@ -46,6 +48,7 @@ const ExpenseForm = (props) => {
                         id="amount"
                         value={expenseFormValues.amount}
                         onChange={changeHandler}
+                        required={true}
                     />
                 </div>
                 <div className="expense-form--control">
@@ -58,10 +61,17 @@ const ExpenseForm = (props) => {
                         id="date"
                         value={expenseFormValues.date}
                         onChange={changeHandler}
+                        required={true}
                     />
                 </div>
             </div>
             <div className="expense-form--actions">
+                <button
+                    className="cancel-button"
+                    onClick={props.onActivationStateChange}
+                >
+                    Cancel
+                </button>
                 <button type="submit">Add expense</button>
             </div>
         </form>

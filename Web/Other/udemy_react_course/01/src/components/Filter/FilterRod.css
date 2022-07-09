@@ -1,0 +1,16 @@
+.filter-rod--pointer {
+    width: 22.5px;
+    margin: auto;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #b97082;
+    border: 1px solid #000000;
+    overflow: hidden;
+}
+
+.filter-rod--inside-pointer {
+    background-color: #bc4e69;
+    height: 100%;
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
