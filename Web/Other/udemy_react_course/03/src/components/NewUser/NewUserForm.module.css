@@ -1,0 +1,36 @@
+.new-user-form {
+    width: 100%;
+}
+
+.new-user-form--inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.new-user-form--input > label {
+    display: block;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.new-user-form--input > input {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 5px;
+    margin-top: 10px;
+    outline: none;
+    background-color: var(--color2);
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.new-user-form > button[type="submit"] {
+    margin-top: 10px;
+    border: none;
+    color: #ffffff;
+    background-color: var(--color3);
+    font-size: 1.2em;
+    padding: 10px 30px;
+    cursor: pointer;
+}

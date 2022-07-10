@@ -1,0 +1,39 @@
+.error-backdrop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+}
+
+.error-message {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-message--title {
+    width: 100%;
+    font-weight: 800;
+    font-size: 1.4em;
+    padding: 15px;
+    background-color: var(--color3);
+}
+
+.error-message--content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message--content > button {
+    padding: 5px 20px;
+    background-color: var(--color3);
+    color: #ffffff;
+    align-self: flex-end;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
