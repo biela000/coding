@@ -5,52 +5,58 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 
 const App = () => {
     const [users, setUsers] = useState([]);
-    const defaultError = {
-        title: "",
-        text: "",
-    };
-    const [error, setError] = useState(defaultError);
+    const [error, setError] = useState(false);
     const dismissError = () => {
-        setError(defaultError);
+        setError(false);
     };
-    const addNewUserHandler = (newUserInfo) => {
-        if (newUserInfo.username === "" || newUserInfo.age === null) {
-            setError({
-                title: "Invalid input",
-                text: "Please enter a valid name and age (non-empty values)",
-            });
-            return;
-        }
-        if (newUserInfo.age.toString() === "NaN") {
+    const defaultFormValues = {
+        username: "",
+        age: "",
+    };
+    const [formValues, setFormValues] = useState(defaultFormValues);
+    const addNewUserHandler = () => {
+        if (isNaN(+formValues.age)) {
             setError({
                 title: "Invalid input",
                 text: "Please enter a valid age (number)",
             });
             return;
         }
-        if (newUserInfo.age < 1) {
+        if (!formValues.username || !+formValues.age) {
+            setError({
+                title: "Invalid input",
+                text: "Please enter a valid name and age (non-empty values)",
+            });
+            return;
+        }
+        if (+formValues.age < 1) {
             setError({
                 title: "Invalid input",
                 text: "Please enter a valid age (> 0)",
             });
             return;
         }
-        setError(defaultError);
+        setFormValues(defaultFormValues);
+        setError(false);
         setUsers((prevUsers) => {
             return [
                 ...prevUsers,
                 {
                     id: Math.random(),
-                    ...newUserInfo,
+                    username: formValues.username,
+                    age: +formValues.age,
                 },
             ];
         });
     };
     return (
         <div className="app">
-            <NewUser onFormSubmit={addNewUserHandler} />
+            <NewUser
+                onFormSubmit={addNewUserHandler}
+                formValuesState={{ var: formValues, func: setFormValues }}
+            />
             <UserList items={users} />
-            {error.title !== "" && (
+            {error.title && (
                 <ErrorMessage
                     errorTitle={error.title}
                     errorText={error.text}

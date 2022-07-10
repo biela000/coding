@@ -1,15 +1,9 @@
-import { useState } from "react";
 import styles from "./NewUserForm.module.css";
 
 const NewUserForm = (props) => {
-    const defaultFormValues = {
-        username: "",
-        age: "",
-    };
-    const [formValues, setFormValues] = useState(defaultFormValues);
     const changeHandler = (event) => {
         const { name, value } = event.target;
-        setFormValues((prevFormValues) => {
+        props.formValuesState.func((prevFormValues) => {
             return {
                 ...prevFormValues,
                 [name]: value,
@@ -18,8 +12,7 @@ const NewUserForm = (props) => {
     };
     const submitHandler = (event) => {
         event.preventDefault();
-        props.onSubmit({ username: formValues.username, age: +formValues.age });
-        setFormValues(defaultFormValues);
+        props.onSubmit();
     };
     return (
         <form className={styles["new-user-form"]} onSubmit={submitHandler}>
@@ -30,7 +23,7 @@ const NewUserForm = (props) => {
                         type="text"
                         name="username"
                         id="username-input"
-                        value={formValues.username}
+                        value={props.formValuesState.var.username}
                         onChange={changeHandler}
                     />
                 </div>
@@ -40,7 +33,7 @@ const NewUserForm = (props) => {
                         type="text"
                         name="age"
                         id="age-input"
-                        value={formValues.age}
+                        value={props.formValuesState.var.age}
                         onChange={changeHandler}
                     />
                 </div>
