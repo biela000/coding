@@ -1,0 +1,10 @@
+.home {
+    height: 200px;
+    padding: 25px;
+    display: grid;
+    place-items: center;
+}
+
+.home > h2 {
+    font-size: 2.5em;
+}

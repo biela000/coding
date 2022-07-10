@@ -1,0 +1,23 @@
+:root {
+    --color1: #ff5959;
+    --color2: #676fa3;
+    --color3: #cddeff;
+    --color4: #eef2ff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: var(--color4);
+}

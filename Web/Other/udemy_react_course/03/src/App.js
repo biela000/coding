@@ -1,7 +1,15 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import NewUser from "./components/NewUser/NewUser";
 import UserList from "./components/UserList/UserList";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
+
+// import { useRef from "react" }
+// const usernameRef = useRef();
+// <input ref={usernameRef} />
+// console.log(usernameRef.current.value)
+// do odczytywania tylko - uncontrolled component
+// do controlled components używasz dalej stateów
 
 const App = () => {
     const [users, setUsers] = useState([]);
@@ -50,20 +58,22 @@ const App = () => {
         });
     };
     return (
-        <div className="app">
+        <React.Fragment>
             <NewUser
                 onFormSubmit={addNewUserHandler}
                 formValuesState={{ var: formValues, func: setFormValues }}
             />
             <UserList items={users} />
-            {error.title && (
-                <ErrorMessage
-                    errorTitle={error.title}
-                    errorText={error.text}
-                    onBackdropClick={dismissError}
-                />
-            )}
-        </div>
+            {error.title &&
+                ReactDOM.createPortal(
+                    <ErrorMessage
+                        errorTitle={error.title}
+                        errorText={error.text}
+                        onBackdropClick={dismissError}
+                    />,
+                    document.getElementById("error-message-root")
+                )}
+        </React.Fragment>
     );
 };
 
