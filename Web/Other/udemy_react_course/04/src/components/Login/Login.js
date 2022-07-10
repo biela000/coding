@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 import styles from "./Login.module.css";
+//NOTE: Z uwagi na to że chciałem tu pokazać useReducer to są niepotrzebne states
 
 const Login = (props) => {
     const defaultFormValues = {
         emailAddress: "",
         password: "",
     };
+    const formReducer = (state, action) => {
+        return {
+            ...state,
+            [action.name]: action.value.trim(),
+        };
+    };
+    const [formState, dispatchFormState] = useReducer(
+        formReducer,
+        defaultFormValues
+    );
     const [formValues, setFormValues] = useState(defaultFormValues);
     const changeHandler = (event) => {
         const { name, value } = event.target;
@@ -17,6 +28,7 @@ const Login = (props) => {
                 [name]: value.trim(),
             };
         });
+        dispatchFormState({ name: name, value: value });
     };
     const isInputValid =
         /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
@@ -26,6 +38,8 @@ const Login = (props) => {
         event.preventDefault();
         props.onSubmit(formValues);
         setFormValues(defaultFormValues);
+        dispatchFormState({ name: "emailAddress", value: "" });
+        dispatchFormState({ name: "password", value: "" });
     };
     return (
         <Card className={styles.login}>
@@ -37,7 +51,7 @@ const Login = (props) => {
                             type="email"
                             name="emailAddress"
                             id="email-input"
-                            value={formValues.emailAddress}
+                            value={formState.emailAddress}
                             onChange={changeHandler}
                         />
                     </div>
@@ -47,7 +61,7 @@ const Login = (props) => {
                             type="password"
                             name="password"
                             id="password-input"
-                            value={formValues.password}
+                            value={formState.password}
                             onChange={changeHandler}
                         />
                     </div>
