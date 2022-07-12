@@ -1,4 +1,5 @@
 .button {
     border-radius: 25px;
     border: none;
+    outline: none;
 }

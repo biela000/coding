@@ -1,0 +1,24 @@
+.input {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+}
+
+.input > label {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #4d4d4d;
+}
+
+.input > input {
+    border-radius: 5px;
+    border: 1px solid #adadad;
+    font-size: 1.1em;
+    padding: 5px;
+    outline: none;
+}
+
+.input > input:focus {
+    background-color: var(--color3);
+    border-color: var(--color2);
+}

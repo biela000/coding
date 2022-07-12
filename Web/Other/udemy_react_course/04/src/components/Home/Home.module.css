@@ -9,3 +9,14 @@
     font-size: 2.5em;
     text-align: center;
 }
+
+.home--logout {
+    padding: 12.5px 60px;
+    font-size: 1.3em;
+    font-weight: 500;
+    background-color: var(--color2);
+    display: block;
+    margin: 20px auto 0 auto;
+    color: var(--color4);
+    cursor: pointer;
+}

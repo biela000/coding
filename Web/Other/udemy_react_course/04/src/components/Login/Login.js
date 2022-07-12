@@ -1,14 +1,17 @@
-import { useState, useReducer } from "react";
+import { useState, useReducer, useContext, useRef, useEffect } from "react";
+import AuthContext from "../context/auth-context";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
+import Input from "../UI/Input";
 import styles from "./Login.module.css";
 //NOTE: Z uwagi na to że chciałem tu pokazać useReducer to są niepotrzebne states
 
-const Login = (props) => {
+const Login = () => {
     const defaultFormValues = {
         emailAddress: "",
         password: "",
     };
+    const authCtx = useContext(AuthContext);
     const formReducer = (state, action) => {
         return {
             ...state,
@@ -36,35 +39,38 @@ const Login = (props) => {
         ) && formValues.password.length > 6;
     const submitHandler = (event) => {
         event.preventDefault();
-        props.onSubmit(formValues);
+        authCtx.onLogin(formValues);
         setFormValues(defaultFormValues);
         dispatchFormState({ name: "emailAddress", value: "" });
         dispatchFormState({ name: "password", value: "" });
     };
+    const emailInputRef = useRef();
+    const passwordInputRef = useRef();
+    useEffect(() => {
+        emailInputRef.current.focus();
+    }, []);
     return (
         <Card className={styles.login}>
             <form className={styles["login-form"]} onSubmit={submitHandler}>
                 <div className={styles["login-form--inputs"]}>
-                    <div className={styles["login-form--input"]}>
-                        <label htmlFor="email-input">E-Mail</label>
-                        <input
-                            type="email"
-                            name="emailAddress"
-                            id="email-input"
-                            value={formState.emailAddress}
-                            onChange={changeHandler}
-                        />
-                    </div>
-                    <div className={styles["login-form--input"]}>
-                        <label htmlFor="password-input">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password-input"
-                            value={formState.password}
-                            onChange={changeHandler}
-                        />
-                    </div>
+                    <Input
+                        ref={emailInputRef}
+                        type="email"
+                        name="emailAddress"
+                        id="email-input"
+                        label="E-Mail"
+                        value={formState.emailAddress}
+                        onChange={changeHandler}
+                    />
+                    <Input
+                        ref={passwordInputRef}
+                        type="password"
+                        name="password"
+                        id="password-input"
+                        label="Password"
+                        value={formState.password}
+                        onChange={changeHandler}
+                    />
                 </div>
                 <Button
                     className={styles["login-form--submit"]}

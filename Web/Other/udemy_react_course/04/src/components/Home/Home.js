@@ -1,11 +1,20 @@
+import { useContext } from "react";
 import Card from "../UI/Card";
-import Login from "../Login/Login";
+import Button from "../UI/Button";
+import AuthContext from "../context/auth-context";
 import styles from "./Home.module.css";
 
-const Home = (props) => {
+const Home = () => {
+    const authCtx = useContext(AuthContext);
     return (
         <Card className={styles.home}>
-            <h2>Welcome back {props.userEmailAddress}</h2>
+            <h2>Welcome back</h2>
+            <Button
+                className={styles["home--logout"]}
+                onClick={authCtx.onLogout}
+            >
+                Logout
+            </Button>
         </Card>
     );
 };
