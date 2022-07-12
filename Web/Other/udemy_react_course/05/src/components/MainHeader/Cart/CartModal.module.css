@@ -1,0 +1,29 @@
+.fallback {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 11;
+}
+
+.modal {
+    background-color: #ffffff;
+    z-index: 12;
+    position: absolute;
+    width: 40%;
+    min-width: 350px;
+    color: var(--color1);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+    padding: 50px 20px;
+}
+
+.modal--summary {
+    margin-top: 20px;
+    font-size: 1.6em;
+    color: #000000;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}

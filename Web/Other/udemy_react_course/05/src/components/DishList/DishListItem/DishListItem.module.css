@@ -1,0 +1,24 @@
+.dish-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dish-list-separator {
+    color: #e5e5e571;
+}
+
+.dish-list-item--name {
+    font-size: 1.3em;
+}
+
+.dish-list-item--description {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.dish-list-item--price {
+    font-size: 1.4em;
+    color: var(--color4);
+    margin-top: 5px;
+}

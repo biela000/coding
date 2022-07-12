@@ -1,0 +1,29 @@
+.dish-amount--input {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.dish-amount--input > label {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.dish-amount--input > input {
+    width: 60px;
+    border: #d3d3d3 1px solid;
+    border-radius: 5px;
+    padding: 5px 0 5px 10px;
+    font-size: 1em;
+}
+
+.dish-amount--add {
+    background-color: var(--color2);
+    border-radius: 25px;
+    padding: 5px 40px;
+    font-size: 1.2em;
+    font-weight: 700;
+    display: block;
+    margin: 10px 0 0 auto;
+    cursor: pointer;
+}

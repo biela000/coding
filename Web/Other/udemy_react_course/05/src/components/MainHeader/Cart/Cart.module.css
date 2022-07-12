@@ -1,0 +1,17 @@
+.cart {
+    display: flex;
+    background-color: var(--color3);
+    padding: 20px 50px;
+    width: 320px;
+    font-size: 1.3em;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.cart--count {
+    border-radius: 25px;
+    background-color: var(--color2);
+    padding: 5px 25px;
+    font-weight: 700;
+}
