@@ -17,13 +17,44 @@
     top: 50%;
     transform: translate(-50%, -80%);
     padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .modal--summary {
-    margin-top: 20px;
     font-size: 1.6em;
     color: #000000;
     font-weight: 700;
     display: flex;
     justify-content: space-between;
+}
+
+.modal--buttons {
+    align-self: flex-end;
+}
+
+.modal--buttons > button {
+    width: 150px;
+    height: 50px;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.modal--close {
+    background-color: transparent;
+    color: var(--color2);
+    border: 2px solid var(--color2);
+    margin-right: 10px;
+}
+
+.modal--order {
+    background-color: var(--color2);
+    border: 2px solid var(--color2);
+}
+
+.modal--order:disabled {
+    background-color: #898787b1;
+    color: var(--color3);
+    border-color: var(--color3);
 }

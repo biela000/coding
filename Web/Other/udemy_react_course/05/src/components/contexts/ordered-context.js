@@ -25,6 +25,15 @@ export const OrderedContextProvider = (props) => {
             }
             const tmpDishes = [...prevCartDishList];
             for (const tmpDish of tmpDishes) {
+                if (
+                    tmpDish.id === dish.id &&
+                    tmpDish.amount === 1 &&
+                    amount < 0
+                ) {
+                    return [...tmpDishes].filter(
+                        (anotherTmp) => anotherTmp.id !== dish.id
+                    );
+                }
                 if (tmpDish.id === dish.id) {
                     tmpDish.amount += amount;
                     break;
