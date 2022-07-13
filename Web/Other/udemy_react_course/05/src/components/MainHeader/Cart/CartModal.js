@@ -36,7 +36,11 @@ const CartModal = (props) => {
                         </Button>
                         <Button
                             className={styles["modal--order"]}
-                            onClick={props.onFallbackClick}
+                            onClick={() => {
+                                console.log("ORDERED!!!");
+                                cartCtx.clearCart();
+                                props.onFallbackClick();
+                            }}
                             disabled={cartCtx.summaryAmount === 0}
                         >
                             Order

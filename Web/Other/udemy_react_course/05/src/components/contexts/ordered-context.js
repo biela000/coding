@@ -4,6 +4,7 @@ const OrderedContext = React.createContext({
     cartDishList: [],
     summaryAmount: 0,
     manageCart: (dish, amount) => {},
+    clearCart: () => {},
 });
 
 export const OrderedContextProvider = (props) => {
@@ -43,9 +44,13 @@ export const OrderedContextProvider = (props) => {
         });
         setSummaryAmount((prevSummaryAmount) => prevSummaryAmount + amount);
     };
+    const clearCart = () => {
+        setCartDishList([]);
+        setSummaryAmount(0);
+    };
     return (
         <OrderedContext.Provider
-            value={{ cartDishList, manageCart, summaryAmount }}
+            value={{ cartDishList, summaryAmount, manageCart, clearCart }}
         >
             {props.children}
         </OrderedContext.Provider>

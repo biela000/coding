@@ -10,10 +10,8 @@ const Cart = () => {
     const cartCtx = useContext(OrderedContext);
     const [isCartClicked, setIsCartClicked] = useState(false);
     const showModalHandler = () => {
-        setIsCartClicked(true);
-    };
-    const hideModalHandler = () => {
-        setIsCartClicked(false);
+        document.body.classList.toggle("scroll-off");
+        setIsCartClicked((prevIsCartClicked) => !prevIsCartClicked);
     };
     return (
         <React.Fragment>
@@ -24,7 +22,7 @@ const Cart = () => {
                     {cartCtx.summaryAmount}
                 </div>
             </Button>
-            {isCartClicked && <CartModal onFallbackClick={hideModalHandler} />}
+            {isCartClicked && <CartModal onFallbackClick={showModalHandler} />}
         </React.Fragment>
     );
 };

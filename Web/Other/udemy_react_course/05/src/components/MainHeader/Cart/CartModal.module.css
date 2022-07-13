@@ -1,6 +1,6 @@
 .fallback {
     width: 100vw;
-    height: 100vh;
+    height: calc(100% + 108px);
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 11;
@@ -54,7 +54,8 @@
 }
 
 .modal--order:disabled {
-    background-color: #898787b1;
-    color: var(--color3);
-    border-color: var(--color3);
+    background-color: #b7b7b7b1;
+    color: #949393;
+    border-color: #949393;
+    cursor: unset;
 }
